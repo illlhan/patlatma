@@ -494,6 +494,8 @@ public:
     QPushButton *ZoomOutVer_2;
     QPushButton *ZoomInHor_2;
     QPushButton *ZoomOutHor_2;
+    QPushButton *bPt_3;
+    QPushButton *bPt_4;
     QWidget *grafik1;
     QDoubleSpinBox *dsbPipe1Pressure_4;
     QDoubleSpinBox *dsbCabinSetpressure;
@@ -583,7 +585,7 @@ public:
     QLabel *label_123;
     QLabel *label_126;
     QLabel *label_129;
-    QWidget *widget;
+    QWidget *layoutWidget10;
     QGridLayout *gridLayout_7;
     QLabel *label_90;
     QLineEdit *leTime_1;
@@ -645,7 +647,7 @@ public:
     QLineEdit *leTime_15;
     QLineEdit *leTempInput_15;
     QLineEdit *leHumidity_15;
-    QWidget *widget1;
+    QWidget *layoutWidget11;
     QHBoxLayout *horizontalLayout_2;
     QLabel *label_91;
     QLineEdit *leTempInput_0;
@@ -732,7 +734,7 @@ public:
     QFrame *line_14;
     QFrame *line_8;
     QPushButton *bExhaustValve;
-    QWidget *layoutWidget10;
+    QWidget *layoutWidget12;
     QVBoxLayout *verticalLayout_3;
     QPushButton *bStartMaintenance;
     QFrame *line_7;
@@ -745,24 +747,24 @@ public:
     QDoubleSpinBox *dsbPipe1PressureMaintenance;
     QPushButton *bRes;
     QPushButton *bFan;
-    QWidget *layoutWidget11;
+    QWidget *layoutWidget13;
     QVBoxLayout *verticalLayout_4;
     QCheckBox *chbRes1;
     QCheckBox *chbRes2;
     QCheckBox *chbRes3;
     QCheckBox *chbResTank;
-    QWidget *layoutWidget12;
+    QWidget *layoutWidget14;
     QVBoxLayout *verticalLayout_5;
     QCheckBox *chbFan1;
     QCheckBox *chbFan2;
     QCheckBox *chbFan3;
-    QWidget *layoutWidget13;
+    QWidget *layoutWidget15;
     QVBoxLayout *verticalLayout_6;
     QCheckBox *chbExhaustValve;
     QDoubleSpinBox *dsbExhaustValveAutoValue;
     QPushButton *bSetExhaustValve;
     QPushButton *bDoorControlActive;
-    QWidget *layoutWidget14;
+    QWidget *layoutWidget16;
     QGridLayout *gridLayout_4;
     QLabel *label_82;
     QDoubleSpinBox *cabinHumidty;
@@ -785,14 +787,14 @@ public:
     QDoubleSpinBox *dsbCalTankPressureInput;
     QLineEdit *leCalExpansionTankErr;
     QLabel *label_76;
-    QWidget *layoutWidget15;
+    QWidget *layoutWidget17;
     QGridLayout *gridLayout_6;
     QLabel *label_103;
     QLabel *label_104;
     QLabel *label_105;
     QLabel *label_106;
     QLabel *label_107;
-    QWidget *layoutWidget16;
+    QWidget *layoutWidget18;
     QGridLayout *gridLayout_12;
     QLineEdit *leCalLiquidTankLevelCoeff;
     QLabel *label_88;
@@ -6564,6 +6566,16 @@ public:
 "fx: 0.4, fy: -0.1,\n"
 "radius: 1.35, stop: 0 #65BAAB, stop: 1 #ddd);\n"
 "}"));
+        bPt_3 = new QPushButton(tab_Details);
+        bPt_3->setObjectName(QStringLiteral("bPt_3"));
+        bPt_3->setGeometry(QRect(650, 60, 94, 40));
+        bPt_3->setMinimumSize(QSize(94, 40));
+        bPt_3->setStyleSheet(QStringLiteral("font: 8pt \"MS Shell Dlg 2\";"));
+        bPt_4 = new QPushButton(tab_Details);
+        bPt_4->setObjectName(QStringLiteral("bPt_4"));
+        bPt_4->setGeometry(QRect(500, 50, 94, 40));
+        bPt_4->setMinimumSize(QSize(94, 40));
+        bPt_4->setStyleSheet(QStringLiteral("font: 8pt \"MS Shell Dlg 2\";"));
         tabWidget->addTab(tab_Details, QString());
         cbSelectGraph->raise();
         pTestGraph->raise();
@@ -6601,6 +6613,8 @@ public:
         ZoomOutVer_2->raise();
         ZoomInHor_2->raise();
         ZoomOutHor_2->raise();
+        bPt_3->raise();
+        bPt_4->raise();
         grafik1 = new QWidget();
         grafik1->setObjectName(QStringLiteral("grafik1"));
         grafik1->setEnabled(true);
@@ -7737,20 +7751,20 @@ public:
         label_129 = new QLabel(page_14);
         label_129->setObjectName(QStringLiteral("label_129"));
         label_129->setGeometry(QRect(480, 410, 171, 31));
-        widget = new QWidget(page_14);
-        widget->setObjectName(QStringLiteral("widget"));
-        widget->setGeometry(QRect(10, 220, 451, 700));
-        gridLayout_7 = new QGridLayout(widget);
+        layoutWidget10 = new QWidget(page_14);
+        layoutWidget10->setObjectName(QStringLiteral("layoutWidget10"));
+        layoutWidget10->setGeometry(QRect(10, 220, 451, 700));
+        gridLayout_7 = new QGridLayout(layoutWidget10);
         gridLayout_7->setSpacing(6);
         gridLayout_7->setContentsMargins(11, 11, 11, 11);
         gridLayout_7->setObjectName(QStringLiteral("gridLayout_7"));
         gridLayout_7->setContentsMargins(0, 0, 0, 0);
-        label_90 = new QLabel(widget);
+        label_90 = new QLabel(layoutWidget10);
         label_90->setObjectName(QStringLiteral("label_90"));
 
         gridLayout_7->addWidget(label_90, 0, 0, 1, 1);
 
-        leTime_1 = new QLineEdit(widget);
+        leTime_1 = new QLineEdit(layoutWidget10);
         leTime_1->setObjectName(QStringLiteral("leTime_1"));
         sizePolicy.setHeightForWidth(leTime_1->sizePolicy().hasHeightForWidth());
         leTime_1->setSizePolicy(sizePolicy);
@@ -7759,7 +7773,7 @@ public:
 
         gridLayout_7->addWidget(leTime_1, 0, 1, 1, 1);
 
-        leTempInput_1 = new QLineEdit(widget);
+        leTempInput_1 = new QLineEdit(layoutWidget10);
         leTempInput_1->setObjectName(QStringLiteral("leTempInput_1"));
         sizePolicy.setHeightForWidth(leTempInput_1->sizePolicy().hasHeightForWidth());
         leTempInput_1->setSizePolicy(sizePolicy);
@@ -7768,7 +7782,7 @@ public:
 
         gridLayout_7->addWidget(leTempInput_1, 0, 2, 1, 1);
 
-        leHumidity_1 = new QLineEdit(widget);
+        leHumidity_1 = new QLineEdit(layoutWidget10);
         leHumidity_1->setObjectName(QStringLiteral("leHumidity_1"));
         sizePolicy.setHeightForWidth(leHumidity_1->sizePolicy().hasHeightForWidth());
         leHumidity_1->setSizePolicy(sizePolicy);
@@ -7777,12 +7791,12 @@ public:
 
         gridLayout_7->addWidget(leHumidity_1, 0, 3, 1, 1);
 
-        label_225 = new QLabel(widget);
+        label_225 = new QLabel(layoutWidget10);
         label_225->setObjectName(QStringLiteral("label_225"));
 
         gridLayout_7->addWidget(label_225, 1, 0, 1, 1);
 
-        leTime_2 = new QLineEdit(widget);
+        leTime_2 = new QLineEdit(layoutWidget10);
         leTime_2->setObjectName(QStringLiteral("leTime_2"));
         sizePolicy.setHeightForWidth(leTime_2->sizePolicy().hasHeightForWidth());
         leTime_2->setSizePolicy(sizePolicy);
@@ -7791,7 +7805,7 @@ public:
 
         gridLayout_7->addWidget(leTime_2, 1, 1, 1, 1);
 
-        leTempInput_2 = new QLineEdit(widget);
+        leTempInput_2 = new QLineEdit(layoutWidget10);
         leTempInput_2->setObjectName(QStringLiteral("leTempInput_2"));
         sizePolicy.setHeightForWidth(leTempInput_2->sizePolicy().hasHeightForWidth());
         leTempInput_2->setSizePolicy(sizePolicy);
@@ -7800,7 +7814,7 @@ public:
 
         gridLayout_7->addWidget(leTempInput_2, 1, 2, 1, 1);
 
-        leHumidity_2 = new QLineEdit(widget);
+        leHumidity_2 = new QLineEdit(layoutWidget10);
         leHumidity_2->setObjectName(QStringLiteral("leHumidity_2"));
         sizePolicy.setHeightForWidth(leHumidity_2->sizePolicy().hasHeightForWidth());
         leHumidity_2->setSizePolicy(sizePolicy);
@@ -7809,12 +7823,12 @@ public:
 
         gridLayout_7->addWidget(leHumidity_2, 1, 3, 1, 1);
 
-        label_224 = new QLabel(widget);
+        label_224 = new QLabel(layoutWidget10);
         label_224->setObjectName(QStringLiteral("label_224"));
 
         gridLayout_7->addWidget(label_224, 2, 0, 1, 1);
 
-        leTime_3 = new QLineEdit(widget);
+        leTime_3 = new QLineEdit(layoutWidget10);
         leTime_3->setObjectName(QStringLiteral("leTime_3"));
         sizePolicy.setHeightForWidth(leTime_3->sizePolicy().hasHeightForWidth());
         leTime_3->setSizePolicy(sizePolicy);
@@ -7823,7 +7837,7 @@ public:
 
         gridLayout_7->addWidget(leTime_3, 2, 1, 1, 1);
 
-        leTempInput_3 = new QLineEdit(widget);
+        leTempInput_3 = new QLineEdit(layoutWidget10);
         leTempInput_3->setObjectName(QStringLiteral("leTempInput_3"));
         sizePolicy.setHeightForWidth(leTempInput_3->sizePolicy().hasHeightForWidth());
         leTempInput_3->setSizePolicy(sizePolicy);
@@ -7832,7 +7846,7 @@ public:
 
         gridLayout_7->addWidget(leTempInput_3, 2, 2, 1, 1);
 
-        leHumidity_3 = new QLineEdit(widget);
+        leHumidity_3 = new QLineEdit(layoutWidget10);
         leHumidity_3->setObjectName(QStringLiteral("leHumidity_3"));
         sizePolicy.setHeightForWidth(leHumidity_3->sizePolicy().hasHeightForWidth());
         leHumidity_3->setSizePolicy(sizePolicy);
@@ -7841,12 +7855,12 @@ public:
 
         gridLayout_7->addWidget(leHumidity_3, 2, 3, 1, 1);
 
-        label_227 = new QLabel(widget);
+        label_227 = new QLabel(layoutWidget10);
         label_227->setObjectName(QStringLiteral("label_227"));
 
         gridLayout_7->addWidget(label_227, 3, 0, 1, 1);
 
-        leTime_4 = new QLineEdit(widget);
+        leTime_4 = new QLineEdit(layoutWidget10);
         leTime_4->setObjectName(QStringLiteral("leTime_4"));
         sizePolicy.setHeightForWidth(leTime_4->sizePolicy().hasHeightForWidth());
         leTime_4->setSizePolicy(sizePolicy);
@@ -7855,7 +7869,7 @@ public:
 
         gridLayout_7->addWidget(leTime_4, 3, 1, 1, 1);
 
-        leTempInput_4 = new QLineEdit(widget);
+        leTempInput_4 = new QLineEdit(layoutWidget10);
         leTempInput_4->setObjectName(QStringLiteral("leTempInput_4"));
         sizePolicy.setHeightForWidth(leTempInput_4->sizePolicy().hasHeightForWidth());
         leTempInput_4->setSizePolicy(sizePolicy);
@@ -7864,7 +7878,7 @@ public:
 
         gridLayout_7->addWidget(leTempInput_4, 3, 2, 1, 1);
 
-        leHumidity_4 = new QLineEdit(widget);
+        leHumidity_4 = new QLineEdit(layoutWidget10);
         leHumidity_4->setObjectName(QStringLiteral("leHumidity_4"));
         sizePolicy.setHeightForWidth(leHumidity_4->sizePolicy().hasHeightForWidth());
         leHumidity_4->setSizePolicy(sizePolicy);
@@ -7873,12 +7887,12 @@ public:
 
         gridLayout_7->addWidget(leHumidity_4, 3, 3, 1, 1);
 
-        label_228 = new QLabel(widget);
+        label_228 = new QLabel(layoutWidget10);
         label_228->setObjectName(QStringLiteral("label_228"));
 
         gridLayout_7->addWidget(label_228, 4, 0, 1, 1);
 
-        leTime_5 = new QLineEdit(widget);
+        leTime_5 = new QLineEdit(layoutWidget10);
         leTime_5->setObjectName(QStringLiteral("leTime_5"));
         sizePolicy.setHeightForWidth(leTime_5->sizePolicy().hasHeightForWidth());
         leTime_5->setSizePolicy(sizePolicy);
@@ -7887,7 +7901,7 @@ public:
 
         gridLayout_7->addWidget(leTime_5, 4, 1, 1, 1);
 
-        leTempInput_5 = new QLineEdit(widget);
+        leTempInput_5 = new QLineEdit(layoutWidget10);
         leTempInput_5->setObjectName(QStringLiteral("leTempInput_5"));
         sizePolicy.setHeightForWidth(leTempInput_5->sizePolicy().hasHeightForWidth());
         leTempInput_5->setSizePolicy(sizePolicy);
@@ -7896,7 +7910,7 @@ public:
 
         gridLayout_7->addWidget(leTempInput_5, 4, 2, 1, 1);
 
-        leHumidity_5 = new QLineEdit(widget);
+        leHumidity_5 = new QLineEdit(layoutWidget10);
         leHumidity_5->setObjectName(QStringLiteral("leHumidity_5"));
         sizePolicy.setHeightForWidth(leHumidity_5->sizePolicy().hasHeightForWidth());
         leHumidity_5->setSizePolicy(sizePolicy);
@@ -7905,12 +7919,12 @@ public:
 
         gridLayout_7->addWidget(leHumidity_5, 4, 3, 1, 1);
 
-        label_226 = new QLabel(widget);
+        label_226 = new QLabel(layoutWidget10);
         label_226->setObjectName(QStringLiteral("label_226"));
 
         gridLayout_7->addWidget(label_226, 5, 0, 1, 1);
 
-        leTime_6 = new QLineEdit(widget);
+        leTime_6 = new QLineEdit(layoutWidget10);
         leTime_6->setObjectName(QStringLiteral("leTime_6"));
         sizePolicy.setHeightForWidth(leTime_6->sizePolicy().hasHeightForWidth());
         leTime_6->setSizePolicy(sizePolicy);
@@ -7919,7 +7933,7 @@ public:
 
         gridLayout_7->addWidget(leTime_6, 5, 1, 1, 1);
 
-        leTempInput_6 = new QLineEdit(widget);
+        leTempInput_6 = new QLineEdit(layoutWidget10);
         leTempInput_6->setObjectName(QStringLiteral("leTempInput_6"));
         sizePolicy.setHeightForWidth(leTempInput_6->sizePolicy().hasHeightForWidth());
         leTempInput_6->setSizePolicy(sizePolicy);
@@ -7928,7 +7942,7 @@ public:
 
         gridLayout_7->addWidget(leTempInput_6, 5, 2, 1, 1);
 
-        leHumidity_6 = new QLineEdit(widget);
+        leHumidity_6 = new QLineEdit(layoutWidget10);
         leHumidity_6->setObjectName(QStringLiteral("leHumidity_6"));
         sizePolicy.setHeightForWidth(leHumidity_6->sizePolicy().hasHeightForWidth());
         leHumidity_6->setSizePolicy(sizePolicy);
@@ -7937,12 +7951,12 @@ public:
 
         gridLayout_7->addWidget(leHumidity_6, 5, 3, 1, 1);
 
-        label_230 = new QLabel(widget);
+        label_230 = new QLabel(layoutWidget10);
         label_230->setObjectName(QStringLiteral("label_230"));
 
         gridLayout_7->addWidget(label_230, 6, 0, 1, 1);
 
-        leTime_7 = new QLineEdit(widget);
+        leTime_7 = new QLineEdit(layoutWidget10);
         leTime_7->setObjectName(QStringLiteral("leTime_7"));
         sizePolicy.setHeightForWidth(leTime_7->sizePolicy().hasHeightForWidth());
         leTime_7->setSizePolicy(sizePolicy);
@@ -7951,7 +7965,7 @@ public:
 
         gridLayout_7->addWidget(leTime_7, 6, 1, 1, 1);
 
-        leTempInput_7 = new QLineEdit(widget);
+        leTempInput_7 = new QLineEdit(layoutWidget10);
         leTempInput_7->setObjectName(QStringLiteral("leTempInput_7"));
         sizePolicy.setHeightForWidth(leTempInput_7->sizePolicy().hasHeightForWidth());
         leTempInput_7->setSizePolicy(sizePolicy);
@@ -7960,7 +7974,7 @@ public:
 
         gridLayout_7->addWidget(leTempInput_7, 6, 2, 1, 1);
 
-        leHumidity_7 = new QLineEdit(widget);
+        leHumidity_7 = new QLineEdit(layoutWidget10);
         leHumidity_7->setObjectName(QStringLiteral("leHumidity_7"));
         sizePolicy.setHeightForWidth(leHumidity_7->sizePolicy().hasHeightForWidth());
         leHumidity_7->setSizePolicy(sizePolicy);
@@ -7969,12 +7983,12 @@ public:
 
         gridLayout_7->addWidget(leHumidity_7, 6, 3, 1, 1);
 
-        label_231 = new QLabel(widget);
+        label_231 = new QLabel(layoutWidget10);
         label_231->setObjectName(QStringLiteral("label_231"));
 
         gridLayout_7->addWidget(label_231, 7, 0, 1, 1);
 
-        leTime_8 = new QLineEdit(widget);
+        leTime_8 = new QLineEdit(layoutWidget10);
         leTime_8->setObjectName(QStringLiteral("leTime_8"));
         sizePolicy.setHeightForWidth(leTime_8->sizePolicy().hasHeightForWidth());
         leTime_8->setSizePolicy(sizePolicy);
@@ -7983,7 +7997,7 @@ public:
 
         gridLayout_7->addWidget(leTime_8, 7, 1, 1, 1);
 
-        leTempInput_8 = new QLineEdit(widget);
+        leTempInput_8 = new QLineEdit(layoutWidget10);
         leTempInput_8->setObjectName(QStringLiteral("leTempInput_8"));
         sizePolicy.setHeightForWidth(leTempInput_8->sizePolicy().hasHeightForWidth());
         leTempInput_8->setSizePolicy(sizePolicy);
@@ -7992,7 +8006,7 @@ public:
 
         gridLayout_7->addWidget(leTempInput_8, 7, 2, 1, 1);
 
-        leHumidity_8 = new QLineEdit(widget);
+        leHumidity_8 = new QLineEdit(layoutWidget10);
         leHumidity_8->setObjectName(QStringLiteral("leHumidity_8"));
         sizePolicy.setHeightForWidth(leHumidity_8->sizePolicy().hasHeightForWidth());
         leHumidity_8->setSizePolicy(sizePolicy);
@@ -8001,12 +8015,12 @@ public:
 
         gridLayout_7->addWidget(leHumidity_8, 7, 3, 1, 1);
 
-        label_229 = new QLabel(widget);
+        label_229 = new QLabel(layoutWidget10);
         label_229->setObjectName(QStringLiteral("label_229"));
 
         gridLayout_7->addWidget(label_229, 8, 0, 1, 1);
 
-        leTime_9 = new QLineEdit(widget);
+        leTime_9 = new QLineEdit(layoutWidget10);
         leTime_9->setObjectName(QStringLiteral("leTime_9"));
         sizePolicy.setHeightForWidth(leTime_9->sizePolicy().hasHeightForWidth());
         leTime_9->setSizePolicy(sizePolicy);
@@ -8015,7 +8029,7 @@ public:
 
         gridLayout_7->addWidget(leTime_9, 8, 1, 1, 1);
 
-        leTempInput_10 = new QLineEdit(widget);
+        leTempInput_10 = new QLineEdit(layoutWidget10);
         leTempInput_10->setObjectName(QStringLiteral("leTempInput_10"));
         sizePolicy.setHeightForWidth(leTempInput_10->sizePolicy().hasHeightForWidth());
         leTempInput_10->setSizePolicy(sizePolicy);
@@ -8024,7 +8038,7 @@ public:
 
         gridLayout_7->addWidget(leTempInput_10, 8, 2, 1, 1);
 
-        leHumidity_9 = new QLineEdit(widget);
+        leHumidity_9 = new QLineEdit(layoutWidget10);
         leHumidity_9->setObjectName(QStringLiteral("leHumidity_9"));
         sizePolicy.setHeightForWidth(leHumidity_9->sizePolicy().hasHeightForWidth());
         leHumidity_9->setSizePolicy(sizePolicy);
@@ -8033,12 +8047,12 @@ public:
 
         gridLayout_7->addWidget(leHumidity_9, 8, 3, 1, 1);
 
-        label_257 = new QLabel(widget);
+        label_257 = new QLabel(layoutWidget10);
         label_257->setObjectName(QStringLiteral("label_257"));
 
         gridLayout_7->addWidget(label_257, 9, 0, 1, 1);
 
-        leTime_10 = new QLineEdit(widget);
+        leTime_10 = new QLineEdit(layoutWidget10);
         leTime_10->setObjectName(QStringLiteral("leTime_10"));
         sizePolicy.setHeightForWidth(leTime_10->sizePolicy().hasHeightForWidth());
         leTime_10->setSizePolicy(sizePolicy);
@@ -8047,7 +8061,7 @@ public:
 
         gridLayout_7->addWidget(leTime_10, 9, 1, 1, 1);
 
-        leTempInput_9 = new QLineEdit(widget);
+        leTempInput_9 = new QLineEdit(layoutWidget10);
         leTempInput_9->setObjectName(QStringLiteral("leTempInput_9"));
         sizePolicy.setHeightForWidth(leTempInput_9->sizePolicy().hasHeightForWidth());
         leTempInput_9->setSizePolicy(sizePolicy);
@@ -8056,7 +8070,7 @@ public:
 
         gridLayout_7->addWidget(leTempInput_9, 9, 2, 1, 1);
 
-        leHumidity_10 = new QLineEdit(widget);
+        leHumidity_10 = new QLineEdit(layoutWidget10);
         leHumidity_10->setObjectName(QStringLiteral("leHumidity_10"));
         sizePolicy.setHeightForWidth(leHumidity_10->sizePolicy().hasHeightForWidth());
         leHumidity_10->setSizePolicy(sizePolicy);
@@ -8065,12 +8079,12 @@ public:
 
         gridLayout_7->addWidget(leHumidity_10, 9, 3, 1, 1);
 
-        label_259 = new QLabel(widget);
+        label_259 = new QLabel(layoutWidget10);
         label_259->setObjectName(QStringLiteral("label_259"));
 
         gridLayout_7->addWidget(label_259, 10, 0, 1, 1);
 
-        leTime_11 = new QLineEdit(widget);
+        leTime_11 = new QLineEdit(layoutWidget10);
         leTime_11->setObjectName(QStringLiteral("leTime_11"));
         sizePolicy.setHeightForWidth(leTime_11->sizePolicy().hasHeightForWidth());
         leTime_11->setSizePolicy(sizePolicy);
@@ -8079,7 +8093,7 @@ public:
 
         gridLayout_7->addWidget(leTime_11, 10, 1, 1, 1);
 
-        leTempInput_11 = new QLineEdit(widget);
+        leTempInput_11 = new QLineEdit(layoutWidget10);
         leTempInput_11->setObjectName(QStringLiteral("leTempInput_11"));
         sizePolicy.setHeightForWidth(leTempInput_11->sizePolicy().hasHeightForWidth());
         leTempInput_11->setSizePolicy(sizePolicy);
@@ -8088,7 +8102,7 @@ public:
 
         gridLayout_7->addWidget(leTempInput_11, 10, 2, 1, 1);
 
-        leHumidity_11 = new QLineEdit(widget);
+        leHumidity_11 = new QLineEdit(layoutWidget10);
         leHumidity_11->setObjectName(QStringLiteral("leHumidity_11"));
         sizePolicy.setHeightForWidth(leHumidity_11->sizePolicy().hasHeightForWidth());
         leHumidity_11->setSizePolicy(sizePolicy);
@@ -8097,12 +8111,12 @@ public:
 
         gridLayout_7->addWidget(leHumidity_11, 10, 3, 1, 1);
 
-        label_232 = new QLabel(widget);
+        label_232 = new QLabel(layoutWidget10);
         label_232->setObjectName(QStringLiteral("label_232"));
 
         gridLayout_7->addWidget(label_232, 11, 0, 1, 1);
 
-        leTime_12 = new QLineEdit(widget);
+        leTime_12 = new QLineEdit(layoutWidget10);
         leTime_12->setObjectName(QStringLiteral("leTime_12"));
         sizePolicy.setHeightForWidth(leTime_12->sizePolicy().hasHeightForWidth());
         leTime_12->setSizePolicy(sizePolicy);
@@ -8111,7 +8125,7 @@ public:
 
         gridLayout_7->addWidget(leTime_12, 11, 1, 1, 1);
 
-        leTempInput_12 = new QLineEdit(widget);
+        leTempInput_12 = new QLineEdit(layoutWidget10);
         leTempInput_12->setObjectName(QStringLiteral("leTempInput_12"));
         sizePolicy.setHeightForWidth(leTempInput_12->sizePolicy().hasHeightForWidth());
         leTempInput_12->setSizePolicy(sizePolicy);
@@ -8120,7 +8134,7 @@ public:
 
         gridLayout_7->addWidget(leTempInput_12, 11, 2, 1, 1);
 
-        leHumidity_12 = new QLineEdit(widget);
+        leHumidity_12 = new QLineEdit(layoutWidget10);
         leHumidity_12->setObjectName(QStringLiteral("leHumidity_12"));
         sizePolicy.setHeightForWidth(leHumidity_12->sizePolicy().hasHeightForWidth());
         leHumidity_12->setSizePolicy(sizePolicy);
@@ -8129,12 +8143,12 @@ public:
 
         gridLayout_7->addWidget(leHumidity_12, 11, 3, 1, 1);
 
-        label_258 = new QLabel(widget);
+        label_258 = new QLabel(layoutWidget10);
         label_258->setObjectName(QStringLiteral("label_258"));
 
         gridLayout_7->addWidget(label_258, 12, 0, 1, 1);
 
-        leTime_13 = new QLineEdit(widget);
+        leTime_13 = new QLineEdit(layoutWidget10);
         leTime_13->setObjectName(QStringLiteral("leTime_13"));
         sizePolicy.setHeightForWidth(leTime_13->sizePolicy().hasHeightForWidth());
         leTime_13->setSizePolicy(sizePolicy);
@@ -8143,7 +8157,7 @@ public:
 
         gridLayout_7->addWidget(leTime_13, 12, 1, 1, 1);
 
-        leTempInput_13 = new QLineEdit(widget);
+        leTempInput_13 = new QLineEdit(layoutWidget10);
         leTempInput_13->setObjectName(QStringLiteral("leTempInput_13"));
         sizePolicy.setHeightForWidth(leTempInput_13->sizePolicy().hasHeightForWidth());
         leTempInput_13->setSizePolicy(sizePolicy);
@@ -8152,7 +8166,7 @@ public:
 
         gridLayout_7->addWidget(leTempInput_13, 12, 2, 1, 1);
 
-        leHumidity_13 = new QLineEdit(widget);
+        leHumidity_13 = new QLineEdit(layoutWidget10);
         leHumidity_13->setObjectName(QStringLiteral("leHumidity_13"));
         sizePolicy.setHeightForWidth(leHumidity_13->sizePolicy().hasHeightForWidth());
         leHumidity_13->setSizePolicy(sizePolicy);
@@ -8161,12 +8175,12 @@ public:
 
         gridLayout_7->addWidget(leHumidity_13, 12, 3, 1, 1);
 
-        label_276 = new QLabel(widget);
+        label_276 = new QLabel(layoutWidget10);
         label_276->setObjectName(QStringLiteral("label_276"));
 
         gridLayout_7->addWidget(label_276, 13, 0, 1, 1);
 
-        leTime_14 = new QLineEdit(widget);
+        leTime_14 = new QLineEdit(layoutWidget10);
         leTime_14->setObjectName(QStringLiteral("leTime_14"));
         sizePolicy.setHeightForWidth(leTime_14->sizePolicy().hasHeightForWidth());
         leTime_14->setSizePolicy(sizePolicy);
@@ -8175,7 +8189,7 @@ public:
 
         gridLayout_7->addWidget(leTime_14, 13, 1, 1, 1);
 
-        leTempInput_14 = new QLineEdit(widget);
+        leTempInput_14 = new QLineEdit(layoutWidget10);
         leTempInput_14->setObjectName(QStringLiteral("leTempInput_14"));
         sizePolicy.setHeightForWidth(leTempInput_14->sizePolicy().hasHeightForWidth());
         leTempInput_14->setSizePolicy(sizePolicy);
@@ -8184,7 +8198,7 @@ public:
 
         gridLayout_7->addWidget(leTempInput_14, 13, 2, 1, 1);
 
-        leHumidity_14 = new QLineEdit(widget);
+        leHumidity_14 = new QLineEdit(layoutWidget10);
         leHumidity_14->setObjectName(QStringLiteral("leHumidity_14"));
         sizePolicy.setHeightForWidth(leHumidity_14->sizePolicy().hasHeightForWidth());
         leHumidity_14->setSizePolicy(sizePolicy);
@@ -8193,12 +8207,12 @@ public:
 
         gridLayout_7->addWidget(leHumidity_14, 13, 3, 1, 1);
 
-        label_310 = new QLabel(widget);
+        label_310 = new QLabel(layoutWidget10);
         label_310->setObjectName(QStringLiteral("label_310"));
 
         gridLayout_7->addWidget(label_310, 14, 0, 1, 1);
 
-        leTime_15 = new QLineEdit(widget);
+        leTime_15 = new QLineEdit(layoutWidget10);
         leTime_15->setObjectName(QStringLiteral("leTime_15"));
         sizePolicy.setHeightForWidth(leTime_15->sizePolicy().hasHeightForWidth());
         leTime_15->setSizePolicy(sizePolicy);
@@ -8207,7 +8221,7 @@ public:
 
         gridLayout_7->addWidget(leTime_15, 14, 1, 1, 1);
 
-        leTempInput_15 = new QLineEdit(widget);
+        leTempInput_15 = new QLineEdit(layoutWidget10);
         leTempInput_15->setObjectName(QStringLiteral("leTempInput_15"));
         sizePolicy.setHeightForWidth(leTempInput_15->sizePolicy().hasHeightForWidth());
         leTempInput_15->setSizePolicy(sizePolicy);
@@ -8216,7 +8230,7 @@ public:
 
         gridLayout_7->addWidget(leTempInput_15, 14, 2, 1, 1);
 
-        leHumidity_15 = new QLineEdit(widget);
+        leHumidity_15 = new QLineEdit(layoutWidget10);
         leHumidity_15->setObjectName(QStringLiteral("leHumidity_15"));
         sizePolicy.setHeightForWidth(leHumidity_15->sizePolicy().hasHeightForWidth());
         leHumidity_15->setSizePolicy(sizePolicy);
@@ -8225,22 +8239,22 @@ public:
 
         gridLayout_7->addWidget(leHumidity_15, 14, 3, 1, 1);
 
-        widget1 = new QWidget(page_14);
-        widget1->setObjectName(QStringLiteral("widget1"));
-        widget1->setGeometry(QRect(10, 140, 451, 42));
-        horizontalLayout_2 = new QHBoxLayout(widget1);
+        layoutWidget11 = new QWidget(page_14);
+        layoutWidget11->setObjectName(QStringLiteral("layoutWidget11"));
+        layoutWidget11->setGeometry(QRect(10, 140, 451, 42));
+        horizontalLayout_2 = new QHBoxLayout(layoutWidget11);
         horizontalLayout_2->setSpacing(6);
         horizontalLayout_2->setContentsMargins(11, 11, 11, 11);
         horizontalLayout_2->setObjectName(QStringLiteral("horizontalLayout_2"));
         horizontalLayout_2->setContentsMargins(0, 0, 0, 0);
-        label_91 = new QLabel(widget1);
+        label_91 = new QLabel(layoutWidget11);
         label_91->setObjectName(QStringLiteral("label_91"));
         label_91->setFont(font7);
         label_91->setStyleSheet(QStringLiteral("font: 14pt \"MS Shell Dlg 2\";"));
 
         horizontalLayout_2->addWidget(label_91);
 
-        leTempInput_0 = new QLineEdit(widget1);
+        leTempInput_0 = new QLineEdit(layoutWidget11);
         leTempInput_0->setObjectName(QStringLiteral("leTempInput_0"));
         sizePolicy.setHeightForWidth(leTempInput_0->sizePolicy().hasHeightForWidth());
         leTempInput_0->setSizePolicy(sizePolicy);
@@ -8249,7 +8263,7 @@ public:
 
         horizontalLayout_2->addWidget(leTempInput_0);
 
-        leHumidity_0 = new QLineEdit(widget1);
+        leHumidity_0 = new QLineEdit(layoutWidget11);
         leHumidity_0->setObjectName(QStringLiteral("leHumidity_0"));
         sizePolicy.setHeightForWidth(leHumidity_0->sizePolicy().hasHeightForWidth());
         leHumidity_0->setSizePolicy(sizePolicy);
@@ -8735,15 +8749,15 @@ public:
 "radius: 1.35, stop: 0 #65BAAB, stop: 1 #ddd);\n"
 "}"));
         bExhaustValve->setCheckable(true);
-        layoutWidget10 = new QWidget(tab_Maintenance);
-        layoutWidget10->setObjectName(QStringLiteral("layoutWidget10"));
-        layoutWidget10->setGeometry(QRect(3, 22, 288, 227));
-        verticalLayout_3 = new QVBoxLayout(layoutWidget10);
+        layoutWidget12 = new QWidget(tab_Maintenance);
+        layoutWidget12->setObjectName(QStringLiteral("layoutWidget12"));
+        layoutWidget12->setGeometry(QRect(3, 22, 288, 227));
+        verticalLayout_3 = new QVBoxLayout(layoutWidget12);
         verticalLayout_3->setSpacing(6);
         verticalLayout_3->setContentsMargins(11, 11, 11, 11);
         verticalLayout_3->setObjectName(QStringLiteral("verticalLayout_3"));
         verticalLayout_3->setContentsMargins(0, 0, 0, 0);
-        bStartMaintenance = new QPushButton(layoutWidget10);
+        bStartMaintenance = new QPushButton(layoutWidget12);
         bStartMaintenance->setObjectName(QStringLiteral("bStartMaintenance"));
         bStartMaintenance->setEnabled(true);
         bStartMaintenance->setStyleSheet(QLatin1String("/*QPushButton {\n"
@@ -8778,7 +8792,7 @@ public:
 
         verticalLayout_3->addWidget(bStartMaintenance);
 
-        line_7 = new QFrame(layoutWidget10);
+        line_7 = new QFrame(layoutWidget12);
         line_7->setObjectName(QStringLiteral("line_7"));
         line_7->setFrameShape(QFrame::HLine);
         line_7->setFrameShadow(QFrame::Sunken);
@@ -8788,14 +8802,14 @@ public:
         formLayout = new QFormLayout();
         formLayout->setSpacing(6);
         formLayout->setObjectName(QStringLiteral("formLayout"));
-        label_94 = new QLabel(layoutWidget10);
+        label_94 = new QLabel(layoutWidget12);
         label_94->setObjectName(QStringLiteral("label_94"));
         label_94->setMinimumSize(QSize(180, 0));
         label_94->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
 
         formLayout->setWidget(0, QFormLayout::LabelRole, label_94);
 
-        dsbCabinTopTempMaintenance = new QDoubleSpinBox(layoutWidget10);
+        dsbCabinTopTempMaintenance = new QDoubleSpinBox(layoutWidget12);
         dsbCabinTopTempMaintenance->setObjectName(QStringLiteral("dsbCabinTopTempMaintenance"));
         dsbCabinTopTempMaintenance->setEnabled(false);
         dsbCabinTopTempMaintenance->setReadOnly(true);
@@ -8807,14 +8821,14 @@ public:
 
         formLayout->setWidget(0, QFormLayout::FieldRole, dsbCabinTopTempMaintenance);
 
-        label_95 = new QLabel(layoutWidget10);
+        label_95 = new QLabel(layoutWidget12);
         label_95->setObjectName(QStringLiteral("label_95"));
         label_95->setMinimumSize(QSize(180, 0));
         label_95->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
 
         formLayout->setWidget(1, QFormLayout::LabelRole, label_95);
 
-        dsbCabinTopTempMaintenance_2 = new QDoubleSpinBox(layoutWidget10);
+        dsbCabinTopTempMaintenance_2 = new QDoubleSpinBox(layoutWidget12);
         dsbCabinTopTempMaintenance_2->setObjectName(QStringLiteral("dsbCabinTopTempMaintenance_2"));
         dsbCabinTopTempMaintenance_2->setEnabled(false);
         dsbCabinTopTempMaintenance_2->setReadOnly(true);
@@ -8826,13 +8840,13 @@ public:
 
         formLayout->setWidget(1, QFormLayout::FieldRole, dsbCabinTopTempMaintenance_2);
 
-        label_64 = new QLabel(layoutWidget10);
+        label_64 = new QLabel(layoutWidget12);
         label_64->setObjectName(QStringLiteral("label_64"));
         label_64->setMinimumSize(QSize(180, 0));
 
         formLayout->setWidget(2, QFormLayout::LabelRole, label_64);
 
-        dsbPipe1PressureMaintenance = new QDoubleSpinBox(layoutWidget10);
+        dsbPipe1PressureMaintenance = new QDoubleSpinBox(layoutWidget12);
         dsbPipe1PressureMaintenance->setObjectName(QStringLiteral("dsbPipe1PressureMaintenance"));
         dsbPipe1PressureMaintenance->setEnabled(false);
         dsbPipe1PressureMaintenance->setReadOnly(true);
@@ -8914,73 +8928,73 @@ public:
 "radius: 1.35, stop: 0 #65BAAB, stop: 1 #ddd);\n"
 "}"));
         bFan->setCheckable(true);
-        layoutWidget11 = new QWidget(tab_Maintenance);
-        layoutWidget11->setObjectName(QStringLiteral("layoutWidget11"));
-        layoutWidget11->setGeometry(QRect(320, 80, 166, 207));
-        verticalLayout_4 = new QVBoxLayout(layoutWidget11);
+        layoutWidget13 = new QWidget(tab_Maintenance);
+        layoutWidget13->setObjectName(QStringLiteral("layoutWidget13"));
+        layoutWidget13->setGeometry(QRect(320, 80, 166, 207));
+        verticalLayout_4 = new QVBoxLayout(layoutWidget13);
         verticalLayout_4->setSpacing(6);
         verticalLayout_4->setContentsMargins(11, 11, 11, 11);
         verticalLayout_4->setObjectName(QStringLiteral("verticalLayout_4"));
         verticalLayout_4->setContentsMargins(0, 0, 0, 0);
-        chbRes1 = new QCheckBox(layoutWidget11);
+        chbRes1 = new QCheckBox(layoutWidget13);
         chbRes1->setObjectName(QStringLiteral("chbRes1"));
         chbRes1->setEnabled(false);
 
         verticalLayout_4->addWidget(chbRes1);
 
-        chbRes2 = new QCheckBox(layoutWidget11);
+        chbRes2 = new QCheckBox(layoutWidget13);
         chbRes2->setObjectName(QStringLiteral("chbRes2"));
         chbRes2->setEnabled(false);
 
         verticalLayout_4->addWidget(chbRes2);
 
-        chbRes3 = new QCheckBox(layoutWidget11);
+        chbRes3 = new QCheckBox(layoutWidget13);
         chbRes3->setObjectName(QStringLiteral("chbRes3"));
         chbRes3->setEnabled(false);
 
         verticalLayout_4->addWidget(chbRes3);
 
-        chbResTank = new QCheckBox(layoutWidget11);
+        chbResTank = new QCheckBox(layoutWidget13);
         chbResTank->setObjectName(QStringLiteral("chbResTank"));
         chbResTank->setEnabled(false);
 
         verticalLayout_4->addWidget(chbResTank);
 
-        layoutWidget12 = new QWidget(tab_Maintenance);
-        layoutWidget12->setObjectName(QStringLiteral("layoutWidget12"));
-        layoutWidget12->setGeometry(QRect(50, 420, 101, 181));
-        verticalLayout_5 = new QVBoxLayout(layoutWidget12);
+        layoutWidget14 = new QWidget(tab_Maintenance);
+        layoutWidget14->setObjectName(QStringLiteral("layoutWidget14"));
+        layoutWidget14->setGeometry(QRect(50, 420, 101, 181));
+        verticalLayout_5 = new QVBoxLayout(layoutWidget14);
         verticalLayout_5->setSpacing(6);
         verticalLayout_5->setContentsMargins(11, 11, 11, 11);
         verticalLayout_5->setObjectName(QStringLiteral("verticalLayout_5"));
         verticalLayout_5->setContentsMargins(0, 0, 0, 0);
-        chbFan1 = new QCheckBox(layoutWidget12);
+        chbFan1 = new QCheckBox(layoutWidget14);
         chbFan1->setObjectName(QStringLiteral("chbFan1"));
         chbFan1->setEnabled(false);
 
         verticalLayout_5->addWidget(chbFan1);
 
-        chbFan2 = new QCheckBox(layoutWidget12);
+        chbFan2 = new QCheckBox(layoutWidget14);
         chbFan2->setObjectName(QStringLiteral("chbFan2"));
         chbFan2->setEnabled(false);
 
         verticalLayout_5->addWidget(chbFan2);
 
-        chbFan3 = new QCheckBox(layoutWidget12);
+        chbFan3 = new QCheckBox(layoutWidget14);
         chbFan3->setObjectName(QStringLiteral("chbFan3"));
         chbFan3->setEnabled(false);
 
         verticalLayout_5->addWidget(chbFan3);
 
-        layoutWidget13 = new QWidget(tab_Maintenance);
-        layoutWidget13->setObjectName(QStringLiteral("layoutWidget13"));
-        layoutWidget13->setGeometry(QRect(320, 417, 131, 161));
-        verticalLayout_6 = new QVBoxLayout(layoutWidget13);
+        layoutWidget15 = new QWidget(tab_Maintenance);
+        layoutWidget15->setObjectName(QStringLiteral("layoutWidget15"));
+        layoutWidget15->setGeometry(QRect(320, 417, 131, 161));
+        verticalLayout_6 = new QVBoxLayout(layoutWidget15);
         verticalLayout_6->setSpacing(6);
         verticalLayout_6->setContentsMargins(11, 11, 11, 11);
         verticalLayout_6->setObjectName(QStringLiteral("verticalLayout_6"));
         verticalLayout_6->setContentsMargins(0, 0, 0, 0);
-        chbExhaustValve = new QCheckBox(layoutWidget13);
+        chbExhaustValve = new QCheckBox(layoutWidget15);
         chbExhaustValve->setObjectName(QStringLiteral("chbExhaustValve"));
         chbExhaustValve->setEnabled(false);
         chbExhaustValve->setIconSize(QSize(20, 20));
@@ -8988,7 +9002,7 @@ public:
 
         verticalLayout_6->addWidget(chbExhaustValve);
 
-        dsbExhaustValveAutoValue = new QDoubleSpinBox(layoutWidget13);
+        dsbExhaustValveAutoValue = new QDoubleSpinBox(layoutWidget15);
         dsbExhaustValveAutoValue->setObjectName(QStringLiteral("dsbExhaustValveAutoValue"));
         dsbExhaustValveAutoValue->setEnabled(false);
         dsbExhaustValveAutoValue->setReadOnly(false);
@@ -8999,7 +9013,7 @@ public:
 
         verticalLayout_6->addWidget(dsbExhaustValveAutoValue);
 
-        bSetExhaustValve = new QPushButton(layoutWidget13);
+        bSetExhaustValve = new QPushButton(layoutWidget15);
         bSetExhaustValve->setObjectName(QStringLiteral("bSetExhaustValve"));
         bSetExhaustValve->setEnabled(false);
         bSetExhaustValve->setStyleSheet(QLatin1String("/*QPushButton {\n"
@@ -9073,21 +9087,21 @@ public:
 "radius: 1.35, stop: 0 rgb(210, 0, 0), stop: 1 rgb(100, 0, 0));\n"
 "}"));
         bDoorControlActive->setCheckable(true);
-        layoutWidget14 = new QWidget(tab_Maintenance);
-        layoutWidget14->setObjectName(QStringLiteral("layoutWidget14"));
-        layoutWidget14->setGeometry(QRect(3, 250, 286, 50));
-        gridLayout_4 = new QGridLayout(layoutWidget14);
+        layoutWidget16 = new QWidget(tab_Maintenance);
+        layoutWidget16->setObjectName(QStringLiteral("layoutWidget16"));
+        layoutWidget16->setGeometry(QRect(3, 250, 286, 50));
+        gridLayout_4 = new QGridLayout(layoutWidget16);
         gridLayout_4->setSpacing(6);
         gridLayout_4->setContentsMargins(11, 11, 11, 11);
         gridLayout_4->setObjectName(QStringLiteral("gridLayout_4"));
         gridLayout_4->setContentsMargins(0, 0, 0, 0);
-        label_82 = new QLabel(layoutWidget14);
+        label_82 = new QLabel(layoutWidget16);
         label_82->setObjectName(QStringLiteral("label_82"));
         label_82->setMinimumSize(QSize(180, 0));
 
         gridLayout_4->addWidget(label_82, 0, 0, 1, 1);
 
-        cabinHumidty = new QDoubleSpinBox(layoutWidget14);
+        cabinHumidty = new QDoubleSpinBox(layoutWidget16);
         cabinHumidty->setObjectName(QStringLiteral("cabinHumidty"));
         cabinHumidty->setEnabled(false);
         cabinHumidty->setReadOnly(true);
@@ -9254,53 +9268,53 @@ public:
         label_76 = new QLabel(tab_calibration);
         label_76->setObjectName(QStringLiteral("label_76"));
         label_76->setGeometry(QRect(10, 680, 41, 42));
-        layoutWidget15 = new QWidget(tab_calibration);
-        layoutWidget15->setObjectName(QStringLiteral("layoutWidget15"));
-        layoutWidget15->setGeometry(QRect(12, 123, 741, 44));
-        gridLayout_6 = new QGridLayout(layoutWidget15);
+        layoutWidget17 = new QWidget(tab_calibration);
+        layoutWidget17->setObjectName(QStringLiteral("layoutWidget17"));
+        layoutWidget17->setGeometry(QRect(12, 123, 741, 44));
+        gridLayout_6 = new QGridLayout(layoutWidget17);
         gridLayout_6->setSpacing(6);
         gridLayout_6->setContentsMargins(11, 11, 11, 11);
         gridLayout_6->setObjectName(QStringLiteral("gridLayout_6"));
         gridLayout_6->setContentsMargins(0, 0, 0, 0);
-        label_103 = new QLabel(layoutWidget15);
+        label_103 = new QLabel(layoutWidget17);
         label_103->setObjectName(QStringLiteral("label_103"));
         label_103->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
 
         gridLayout_6->addWidget(label_103, 0, 0, 1, 1);
 
-        label_104 = new QLabel(layoutWidget15);
+        label_104 = new QLabel(layoutWidget17);
         label_104->setObjectName(QStringLiteral("label_104"));
         label_104->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
 
         gridLayout_6->addWidget(label_104, 0, 1, 1, 1);
 
-        label_105 = new QLabel(layoutWidget15);
+        label_105 = new QLabel(layoutWidget17);
         label_105->setObjectName(QStringLiteral("label_105"));
         label_105->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
 
         gridLayout_6->addWidget(label_105, 0, 2, 1, 1);
 
-        label_106 = new QLabel(layoutWidget15);
+        label_106 = new QLabel(layoutWidget17);
         label_106->setObjectName(QStringLiteral("label_106"));
         label_106->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
 
         gridLayout_6->addWidget(label_106, 0, 3, 1, 1);
 
-        label_107 = new QLabel(layoutWidget15);
+        label_107 = new QLabel(layoutWidget17);
         label_107->setObjectName(QStringLiteral("label_107"));
         label_107->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
 
         gridLayout_6->addWidget(label_107, 0, 4, 1, 1);
 
-        layoutWidget16 = new QWidget(tab_calibration);
-        layoutWidget16->setObjectName(QStringLiteral("layoutWidget16"));
-        layoutWidget16->setGeometry(QRect(11, 188, 736, 311));
-        gridLayout_12 = new QGridLayout(layoutWidget16);
+        layoutWidget18 = new QWidget(tab_calibration);
+        layoutWidget18->setObjectName(QStringLiteral("layoutWidget18"));
+        layoutWidget18->setGeometry(QRect(11, 188, 736, 311));
+        gridLayout_12 = new QGridLayout(layoutWidget18);
         gridLayout_12->setSpacing(6);
         gridLayout_12->setContentsMargins(11, 11, 11, 11);
         gridLayout_12->setObjectName(QStringLiteral("gridLayout_12"));
         gridLayout_12->setContentsMargins(0, 0, 0, 0);
-        leCalLiquidTankLevelCoeff = new QLineEdit(layoutWidget16);
+        leCalLiquidTankLevelCoeff = new QLineEdit(layoutWidget18);
         leCalLiquidTankLevelCoeff->setObjectName(QStringLiteral("leCalLiquidTankLevelCoeff"));
         sizePolicy.setHeightForWidth(leCalLiquidTankLevelCoeff->sizePolicy().hasHeightForWidth());
         leCalLiquidTankLevelCoeff->setSizePolicy(sizePolicy);
@@ -9309,13 +9323,13 @@ public:
 
         gridLayout_12->addWidget(leCalLiquidTankLevelCoeff, 4, 3, 1, 1);
 
-        label_88 = new QLabel(layoutWidget16);
+        label_88 = new QLabel(layoutWidget18);
         label_88->setObjectName(QStringLiteral("label_88"));
         label_88->setFont(font4);
 
         gridLayout_12->addWidget(label_88, 4, 0, 1, 1);
 
-        leCalCabinTopTempCoeff = new QLineEdit(layoutWidget16);
+        leCalCabinTopTempCoeff = new QLineEdit(layoutWidget18);
         leCalCabinTopTempCoeff->setObjectName(QStringLiteral("leCalCabinTopTempCoeff"));
         sizePolicy.setHeightForWidth(leCalCabinTopTempCoeff->sizePolicy().hasHeightForWidth());
         leCalCabinTopTempCoeff->setSizePolicy(sizePolicy);
@@ -9324,7 +9338,7 @@ public:
 
         gridLayout_12->addWidget(leCalCabinTopTempCoeff, 0, 3, 1, 1);
 
-        dsbCalLiquidTankLevelOut = new QDoubleSpinBox(layoutWidget16);
+        dsbCalLiquidTankLevelOut = new QDoubleSpinBox(layoutWidget18);
         dsbCalLiquidTankLevelOut->setObjectName(QStringLiteral("dsbCalLiquidTankLevelOut"));
         dsbCalLiquidTankLevelOut->setEnabled(false);
         dsbCalLiquidTankLevelOut->setMinimumSize(QSize(0, 50));
@@ -9337,7 +9351,7 @@ public:
 
         gridLayout_12->addWidget(dsbCalLiquidTankLevelOut, 4, 4, 1, 1);
 
-        leCalPipePressure1Err = new QLineEdit(layoutWidget16);
+        leCalPipePressure1Err = new QLineEdit(layoutWidget18);
         leCalPipePressure1Err->setObjectName(QStringLiteral("leCalPipePressure1Err"));
         sizePolicy.setHeightForWidth(leCalPipePressure1Err->sizePolicy().hasHeightForWidth());
         leCalPipePressure1Err->setSizePolicy(sizePolicy);
@@ -9346,12 +9360,12 @@ public:
 
         gridLayout_12->addWidget(leCalPipePressure1Err, 2, 2, 1, 1);
 
-        label_71 = new QLabel(layoutWidget16);
+        label_71 = new QLabel(layoutWidget18);
         label_71->setObjectName(QStringLiteral("label_71"));
 
         gridLayout_12->addWidget(label_71, 2, 0, 1, 1);
 
-        dsbCalLiquidTankLevelInput = new QDoubleSpinBox(layoutWidget16);
+        dsbCalLiquidTankLevelInput = new QDoubleSpinBox(layoutWidget18);
         dsbCalLiquidTankLevelInput->setObjectName(QStringLiteral("dsbCalLiquidTankLevelInput"));
         dsbCalLiquidTankLevelInput->setEnabled(false);
         dsbCalLiquidTankLevelInput->setMinimumSize(QSize(0, 50));
@@ -9364,7 +9378,7 @@ public:
 
         gridLayout_12->addWidget(dsbCalLiquidTankLevelInput, 4, 1, 1, 1);
 
-        leCalLiquidTempCoeff = new QLineEdit(layoutWidget16);
+        leCalLiquidTempCoeff = new QLineEdit(layoutWidget18);
         leCalLiquidTempCoeff->setObjectName(QStringLiteral("leCalLiquidTempCoeff"));
         sizePolicy.setHeightForWidth(leCalLiquidTempCoeff->sizePolicy().hasHeightForWidth());
         leCalLiquidTempCoeff->setSizePolicy(sizePolicy);
@@ -9373,13 +9387,13 @@ public:
 
         gridLayout_12->addWidget(leCalLiquidTempCoeff, 3, 3, 1, 1);
 
-        label_109 = new QLabel(layoutWidget16);
+        label_109 = new QLabel(layoutWidget18);
         label_109->setObjectName(QStringLiteral("label_109"));
         label_109->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
 
         gridLayout_12->addWidget(label_109, 1, 0, 1, 1);
 
-        leCalLiquidTempErr = new QLineEdit(layoutWidget16);
+        leCalLiquidTempErr = new QLineEdit(layoutWidget18);
         leCalLiquidTempErr->setObjectName(QStringLiteral("leCalLiquidTempErr"));
         sizePolicy.setHeightForWidth(leCalLiquidTempErr->sizePolicy().hasHeightForWidth());
         leCalLiquidTempErr->setSizePolicy(sizePolicy);
@@ -9388,7 +9402,7 @@ public:
 
         gridLayout_12->addWidget(leCalLiquidTempErr, 3, 2, 1, 1);
 
-        dsbCalPipePressure1Input = new QDoubleSpinBox(layoutWidget16);
+        dsbCalPipePressure1Input = new QDoubleSpinBox(layoutWidget18);
         dsbCalPipePressure1Input->setObjectName(QStringLiteral("dsbCalPipePressure1Input"));
         dsbCalPipePressure1Input->setEnabled(false);
         sizePolicy.setHeightForWidth(dsbCalPipePressure1Input->sizePolicy().hasHeightForWidth());
@@ -9403,7 +9417,7 @@ public:
 
         gridLayout_12->addWidget(dsbCalPipePressure1Input, 2, 1, 1, 1);
 
-        dsbCalPipePressure1Out = new QDoubleSpinBox(layoutWidget16);
+        dsbCalPipePressure1Out = new QDoubleSpinBox(layoutWidget18);
         dsbCalPipePressure1Out->setObjectName(QStringLiteral("dsbCalPipePressure1Out"));
         dsbCalPipePressure1Out->setEnabled(false);
         dsbCalPipePressure1Out->setMinimumSize(QSize(0, 50));
@@ -9416,7 +9430,7 @@ public:
 
         gridLayout_12->addWidget(dsbCalPipePressure1Out, 2, 4, 1, 1);
 
-        dsbCalCabinTopTempInput = new QDoubleSpinBox(layoutWidget16);
+        dsbCalCabinTopTempInput = new QDoubleSpinBox(layoutWidget18);
         dsbCalCabinTopTempInput->setObjectName(QStringLiteral("dsbCalCabinTopTempInput"));
         dsbCalCabinTopTempInput->setEnabled(false);
         dsbCalCabinTopTempInput->setMinimumSize(QSize(106, 50));
@@ -9430,7 +9444,7 @@ public:
 
         gridLayout_12->addWidget(dsbCalCabinTopTempInput, 0, 1, 1, 1);
 
-        dsbCalLiquidTempInput = new QDoubleSpinBox(layoutWidget16);
+        dsbCalLiquidTempInput = new QDoubleSpinBox(layoutWidget18);
         dsbCalLiquidTempInput->setObjectName(QStringLiteral("dsbCalLiquidTempInput"));
         dsbCalLiquidTempInput->setEnabled(false);
         sizePolicy.setHeightForWidth(dsbCalLiquidTempInput->sizePolicy().hasHeightForWidth());
@@ -9445,12 +9459,12 @@ public:
 
         gridLayout_12->addWidget(dsbCalLiquidTempInput, 3, 1, 1, 1);
 
-        label_86 = new QLabel(layoutWidget16);
+        label_86 = new QLabel(layoutWidget18);
         label_86->setObjectName(QStringLiteral("label_86"));
 
         gridLayout_12->addWidget(label_86, 3, 0, 1, 1);
 
-        dsbCalCabinBottomInput = new QDoubleSpinBox(layoutWidget16);
+        dsbCalCabinBottomInput = new QDoubleSpinBox(layoutWidget18);
         dsbCalCabinBottomInput->setObjectName(QStringLiteral("dsbCalCabinBottomInput"));
         dsbCalCabinBottomInput->setEnabled(false);
         dsbCalCabinBottomInput->setMinimumSize(QSize(106, 50));
@@ -9464,7 +9478,7 @@ public:
 
         gridLayout_12->addWidget(dsbCalCabinBottomInput, 1, 1, 1, 1);
 
-        dsbCalLiquidTempOut = new QDoubleSpinBox(layoutWidget16);
+        dsbCalLiquidTempOut = new QDoubleSpinBox(layoutWidget18);
         dsbCalLiquidTempOut->setObjectName(QStringLiteral("dsbCalLiquidTempOut"));
         dsbCalLiquidTempOut->setEnabled(false);
         dsbCalLiquidTempOut->setMinimumSize(QSize(0, 50));
@@ -9477,7 +9491,7 @@ public:
 
         gridLayout_12->addWidget(dsbCalLiquidTempOut, 3, 4, 1, 1);
 
-        leCalCabinBottomTempCoeff = new QLineEdit(layoutWidget16);
+        leCalCabinBottomTempCoeff = new QLineEdit(layoutWidget18);
         leCalCabinBottomTempCoeff->setObjectName(QStringLiteral("leCalCabinBottomTempCoeff"));
         sizePolicy.setHeightForWidth(leCalCabinBottomTempCoeff->sizePolicy().hasHeightForWidth());
         leCalCabinBottomTempCoeff->setSizePolicy(sizePolicy);
@@ -9486,7 +9500,7 @@ public:
 
         gridLayout_12->addWidget(leCalCabinBottomTempCoeff, 1, 3, 1, 1);
 
-        leCalCabinTopTempErr = new QLineEdit(layoutWidget16);
+        leCalCabinTopTempErr = new QLineEdit(layoutWidget18);
         leCalCabinTopTempErr->setObjectName(QStringLiteral("leCalCabinTopTempErr"));
         sizePolicy.setHeightForWidth(leCalCabinTopTempErr->sizePolicy().hasHeightForWidth());
         leCalCabinTopTempErr->setSizePolicy(sizePolicy);
@@ -9495,7 +9509,7 @@ public:
 
         gridLayout_12->addWidget(leCalCabinTopTempErr, 0, 2, 1, 1);
 
-        leCalCabinBottomTempErr = new QLineEdit(layoutWidget16);
+        leCalCabinBottomTempErr = new QLineEdit(layoutWidget18);
         leCalCabinBottomTempErr->setObjectName(QStringLiteral("leCalCabinBottomTempErr"));
         sizePolicy.setHeightForWidth(leCalCabinBottomTempErr->sizePolicy().hasHeightForWidth());
         leCalCabinBottomTempErr->setSizePolicy(sizePolicy);
@@ -9504,7 +9518,7 @@ public:
 
         gridLayout_12->addWidget(leCalCabinBottomTempErr, 1, 2, 1, 1);
 
-        dsbCalCabinTopTempOut = new QDoubleSpinBox(layoutWidget16);
+        dsbCalCabinTopTempOut = new QDoubleSpinBox(layoutWidget18);
         dsbCalCabinTopTempOut->setObjectName(QStringLiteral("dsbCalCabinTopTempOut"));
         dsbCalCabinTopTempOut->setEnabled(false);
         dsbCalCabinTopTempOut->setMinimumSize(QSize(118, 50));
@@ -9518,14 +9532,14 @@ public:
 
         gridLayout_12->addWidget(dsbCalCabinTopTempOut, 0, 4, 1, 1);
 
-        label_108 = new QLabel(layoutWidget16);
+        label_108 = new QLabel(layoutWidget18);
         label_108->setObjectName(QStringLiteral("label_108"));
         label_108->setFont(font4);
         label_108->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
 
         gridLayout_12->addWidget(label_108, 0, 0, 1, 1);
 
-        leCalPipePressure1Coeff = new QLineEdit(layoutWidget16);
+        leCalPipePressure1Coeff = new QLineEdit(layoutWidget18);
         leCalPipePressure1Coeff->setObjectName(QStringLiteral("leCalPipePressure1Coeff"));
         sizePolicy.setHeightForWidth(leCalPipePressure1Coeff->sizePolicy().hasHeightForWidth());
         leCalPipePressure1Coeff->setSizePolicy(sizePolicy);
@@ -9534,7 +9548,7 @@ public:
 
         gridLayout_12->addWidget(leCalPipePressure1Coeff, 2, 3, 1, 1);
 
-        leCalLiquidTankLevelErr = new QLineEdit(layoutWidget16);
+        leCalLiquidTankLevelErr = new QLineEdit(layoutWidget18);
         leCalLiquidTankLevelErr->setObjectName(QStringLiteral("leCalLiquidTankLevelErr"));
         sizePolicy.setHeightForWidth(leCalLiquidTankLevelErr->sizePolicy().hasHeightForWidth());
         leCalLiquidTankLevelErr->setSizePolicy(sizePolicy);
@@ -9543,7 +9557,7 @@ public:
 
         gridLayout_12->addWidget(leCalLiquidTankLevelErr, 4, 2, 1, 1);
 
-        dsbCalCabinBottomTempOut = new QDoubleSpinBox(layoutWidget16);
+        dsbCalCabinBottomTempOut = new QDoubleSpinBox(layoutWidget18);
         dsbCalCabinBottomTempOut->setObjectName(QStringLiteral("dsbCalCabinBottomTempOut"));
         dsbCalCabinBottomTempOut->setEnabled(false);
         dsbCalCabinBottomTempOut->setMinimumSize(QSize(142, 50));
@@ -9565,7 +9579,7 @@ public:
 
         retranslateUi(MainWindow);
 
-        tabWidget->setCurrentIndex(4);
+        tabWidget->setCurrentIndex(2);
         mainPage->setCurrentIndex(0);
         cbFixMode->setCurrentIndex(0);
         detailsPages->setCurrentIndex(0);
@@ -9947,6 +9961,8 @@ public:
         ZoomOutVer_2->setText(QApplication::translate("MainWindow", "-", Q_NULLPTR));
         ZoomInHor_2->setText(QApplication::translate("MainWindow", "+", Q_NULLPTR));
         ZoomOutHor_2->setText(QApplication::translate("MainWindow", "-", Q_NULLPTR));
+        bPt_3->setText(QApplication::translate("MainWindow", "P-T", Q_NULLPTR));
+        bPt_4->setText(QApplication::translate("MainWindow", "P-t", Q_NULLPTR));
         tabWidget->setTabText(tabWidget->indexOf(tab_Details), QApplication::translate("MainWindow", "Grafik", Q_NULLPTR));
         label_118->setText(QApplication::translate("MainWindow", "Ortam (\302\260C)", Q_NULLPTR));
         ZoomInHor->setText(QApplication::translate("MainWindow", "+", Q_NULLPTR));
