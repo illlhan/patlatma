@@ -1,0 +1,16 @@
+INPUT(
+./debug\main.o
+./debug\mainwindow.o
+./debug\qcustomplot.o
+./debug\myserial.o
+./debug\serialprocess.o
+./debug\lookprofile.o
+./debug\numpad.o
+./debug\qrc_src.o
+./debug\moc_mainwindow.o
+./debug\moc_qcustomplot.o
+./debug\moc_myserial.o
+./debug\moc_serialprocess.o
+./debug\moc_lookprofile.o
+./debug\moc_numpad.o
+);

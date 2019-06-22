@@ -1,0 +1,16 @@
+INPUT(
+./release\main.o
+./release\mainwindow.o
+./release\qcustomplot.o
+./release\myserial.o
+./release\serialprocess.o
+./release\lookprofile.o
+./release\numpad.o
+./release\qrc_src.o
+./release\moc_mainwindow.o
+./release\moc_qcustomplot.o
+./release\moc_myserial.o
+./release\moc_serialprocess.o
+./release\moc_lookprofile.o
+./release\moc_numpad.o
+);

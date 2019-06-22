@@ -1,0 +1,9 @@
+Temperature Elapsed Seconds: 0
+Pressure Elapsed Seconds: 0
+Vibration Elapsed Seconds: 0
+Temperature Step: 1
+Pressure Step: 0	Pressure Step Repeat: 0
+Vibration Step: 0	Vibration Step Repeat: 0
+Temperature Cycle: 0
+Pressure Cycle: 0
+Vibration Cycle: 0

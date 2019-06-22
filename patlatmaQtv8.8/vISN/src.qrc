@@ -1,0 +1,22 @@
+<RCC>
+    <qresource prefix="/images">
+        <file>img/background1.jpg</file>
+        <file>img/background2.jpg</file>
+        <file>img/background3.jpg</file>
+        <file>img/background4.jpg</file>
+        <file>img/background5.jpg</file>
+        <file>img/chexbox_Checked_30px.png</file>
+        <file>img/chexbox_unChecked_30px.png</file>
+        <file>img/chechbox_Pipe_checked.png</file>
+        <file>img/chechbox_Pipe_unchecked.png</file>
+        <file>img/tankLevel_faultCleanLiquid.png</file>
+        <file>img/tankLevel_faultDirtyLiquid.png</file>
+        <file>img/tankLevel_OK.png</file>
+        <file>img/heater_on.png</file>
+        <file>img/button_info.png</file>
+        <file>img/button_pressure.png</file>
+        <file>img/alarm.png</file>
+        <file>img/qt3.PNG</file>
+        <file>img/qt4.PNG</file>
+    </qresource>
+</RCC>
