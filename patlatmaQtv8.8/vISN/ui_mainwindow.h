@@ -494,8 +494,6 @@ public:
     QPushButton *ZoomOutVer_2;
     QPushButton *ZoomInHor_2;
     QPushButton *ZoomOutHor_2;
-    QPushButton *bPt_3;
-    QPushButton *bPt_4;
     QWidget *grafik1;
     QDoubleSpinBox *dsbPipe1Pressure_4;
     QDoubleSpinBox *dsbCabinSetpressure;
@@ -6566,16 +6564,6 @@ public:
 "fx: 0.4, fy: -0.1,\n"
 "radius: 1.35, stop: 0 #65BAAB, stop: 1 #ddd);\n"
 "}"));
-        bPt_3 = new QPushButton(tab_Details);
-        bPt_3->setObjectName(QStringLiteral("bPt_3"));
-        bPt_3->setGeometry(QRect(650, 60, 94, 40));
-        bPt_3->setMinimumSize(QSize(94, 40));
-        bPt_3->setStyleSheet(QStringLiteral("font: 8pt \"MS Shell Dlg 2\";"));
-        bPt_4 = new QPushButton(tab_Details);
-        bPt_4->setObjectName(QStringLiteral("bPt_4"));
-        bPt_4->setGeometry(QRect(500, 50, 94, 40));
-        bPt_4->setMinimumSize(QSize(94, 40));
-        bPt_4->setStyleSheet(QStringLiteral("font: 8pt \"MS Shell Dlg 2\";"));
         tabWidget->addTab(tab_Details, QString());
         cbSelectGraph->raise();
         pTestGraph->raise();
@@ -6613,8 +6601,6 @@ public:
         ZoomOutVer_2->raise();
         ZoomInHor_2->raise();
         ZoomOutHor_2->raise();
-        bPt_3->raise();
-        bPt_4->raise();
         grafik1 = new QWidget();
         grafik1->setObjectName(QStringLiteral("grafik1"));
         grafik1->setEnabled(true);
@@ -9961,8 +9947,6 @@ public:
         ZoomOutVer_2->setText(QApplication::translate("MainWindow", "-", Q_NULLPTR));
         ZoomInHor_2->setText(QApplication::translate("MainWindow", "+", Q_NULLPTR));
         ZoomOutHor_2->setText(QApplication::translate("MainWindow", "-", Q_NULLPTR));
-        bPt_3->setText(QApplication::translate("MainWindow", "P-T", Q_NULLPTR));
-        bPt_4->setText(QApplication::translate("MainWindow", "P-t", Q_NULLPTR));
         tabWidget->setTabText(tabWidget->indexOf(tab_Details), QApplication::translate("MainWindow", "Grafik", Q_NULLPTR));
         label_118->setText(QApplication::translate("MainWindow", "Ortam (\302\260C)", Q_NULLPTR));
         ZoomInHor->setText(QApplication::translate("MainWindow", "+", Q_NULLPTR));
