@@ -201,6 +201,7 @@ public:
     QLabel *label_83;
     QPushButton *bMainDoorInfo;
     QPushButton *bLiquidCoolerControl;
+    QPushButton *bRecipeMode_2;
     QWidget *tab_setTemp;
     QStackedWidget *detailsPages;
     QWidget *detailsMain;
@@ -2901,6 +2902,43 @@ public:
 "radius: 1.35, stop: 0 #65BAAB, stop: 1 #ddd);\n"
 "}*/"));
         bLiquidCoolerControl->setCheckable(true);
+        bRecipeMode_2 = new QPushButton(tab_Main);
+        bRecipeMode_2->setObjectName(QStringLiteral("bRecipeMode_2"));
+        bRecipeMode_2->setGeometry(QRect(20, 280, 171, 91));
+        sizePolicy.setHeightForWidth(bRecipeMode_2->sizePolicy().hasHeightForWidth());
+        bRecipeMode_2->setSizePolicy(sizePolicy);
+        bRecipeMode_2->setMinimumSize(QSize(94, 50));
+        bRecipeMode_2->setMaximumSize(QSize(200, 100));
+        bRecipeMode_2->setFont(font3);
+        bRecipeMode_2->setStyleSheet(QLatin1String("/*QPushButton {\n"
+"color: #fff;\n"
+"font-family: \"Gill Sans MT\";\n"
+"font-size: 21px;\n"
+"border: 2px solid #c3fcf1;\n"
+"border-radius: 11px;\n"
+"padding: 5px;\n"
+"background: qradialgradient(cx: 0.3, cy: -0.6,\n"
+"fx: 0.3, fy: -0.4,\n"
+"radius: 1.35, stop: 0 #65BAAB, stop: 1 #0E62A0);\n"
+"min-width: 80px;\n"
+"}\n"
+"QPushButton:hover {\n"
+"background: qradialgradient(cx: 0.3, cy: -0.4,\n"
+"fx: 0.3, fy: -0.4,\n"
+"radius: 1.35, stop: 0 #65BAAB, stop: 1 #0E62A0);\n"
+"}\n"
+"QPushButton:pressed {\n"
+"background: qradialgradient(cx: 0.4, cy: -0.1,\n"
+"fx: 0.4, fy: -0.1,\n"
+"radius: 1.35, stop: 0 #65BAAB, stop: 1 #ddd);\n"
+"}\n"
+"QPushButton:disabled {\n"
+"color: #888;\n"
+"background: qradialgradient(cx: 0.4, cy: -0.1,\n"
+"fx: 0.4, fy: -0.1,\n"
+"radius: 1.35, stop: 0 #65BAAB, stop: 1 #ddd);\n"
+"}*/"));
+        bRecipeMode_2->setCheckable(true);
         tabWidget->addTab(tab_Main, QString());
         bClearLogTable_2->raise();
         bLightsMain->raise();
@@ -2915,6 +2953,7 @@ public:
         mainPage->raise();
         bMainDoorInfo->raise();
         bLiquidCoolerControl->raise();
+        bRecipeMode_2->raise();
         tab_setTemp = new QWidget();
         tab_setTemp->setObjectName(QStringLiteral("tab_setTemp"));
         detailsPages = new QStackedWidget(tab_setTemp);
@@ -9565,7 +9604,7 @@ public:
 
         retranslateUi(MainWindow);
 
-        tabWidget->setCurrentIndex(2);
+        tabWidget->setCurrentIndex(0);
         mainPage->setCurrentIndex(0);
         cbFixMode->setCurrentIndex(0);
         detailsPages->setCurrentIndex(0);
@@ -9719,6 +9758,7 @@ public:
         label_83->setText(QApplication::translate("MainWindow", "Patlatma \304\260stasyon 5 i\303\247in", Q_NULLPTR));
         bMainDoorInfo->setText(QApplication::translate("MainWindow", "Kapak Kontrol", Q_NULLPTR));
         bLiquidCoolerControl->setText(QApplication::translate("MainWindow", "S\304\261v\304\261\302\260C Kontrol", Q_NULLPTR));
+        bRecipeMode_2->setText(QApplication::translate("MainWindow", "Recete Modu", Q_NULLPTR));
         tabWidget->setTabText(tabWidget->indexOf(tab_Main), QApplication::translate("MainWindow", "Ana Sayfa", Q_NULLPTR));
         label_26->setText(QApplication::translate("MainWindow", "\304\260\305\237lenen Test Durumu", Q_NULLPTR));
         QTableWidgetItem *___qtablewidgetitem = warningTable->horizontalHeaderItem(0);
