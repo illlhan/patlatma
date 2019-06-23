@@ -201,7 +201,6 @@ public:
     QLabel *label_83;
     QPushButton *bMainDoorInfo;
     QPushButton *bLiquidCoolerControl;
-    QPushButton *bRecipeMode_2;
     QWidget *tab_setTemp;
     QStackedWidget *detailsPages;
     QWidget *detailsMain;
@@ -651,6 +650,7 @@ public:
     QLabel *label_91;
     QLineEdit *leTempInput_0;
     QLineEdit *leHumidity_0;
+    QLabel *leChangetime;
     QLabel *laTime_4;
     QPushButton *bMinimize_4;
     QLabel *laDate_4;
@@ -2902,43 +2902,6 @@ public:
 "radius: 1.35, stop: 0 #65BAAB, stop: 1 #ddd);\n"
 "}*/"));
         bLiquidCoolerControl->setCheckable(true);
-        bRecipeMode_2 = new QPushButton(tab_Main);
-        bRecipeMode_2->setObjectName(QStringLiteral("bRecipeMode_2"));
-        bRecipeMode_2->setGeometry(QRect(20, 280, 171, 91));
-        sizePolicy.setHeightForWidth(bRecipeMode_2->sizePolicy().hasHeightForWidth());
-        bRecipeMode_2->setSizePolicy(sizePolicy);
-        bRecipeMode_2->setMinimumSize(QSize(94, 50));
-        bRecipeMode_2->setMaximumSize(QSize(200, 100));
-        bRecipeMode_2->setFont(font3);
-        bRecipeMode_2->setStyleSheet(QLatin1String("/*QPushButton {\n"
-"color: #fff;\n"
-"font-family: \"Gill Sans MT\";\n"
-"font-size: 21px;\n"
-"border: 2px solid #c3fcf1;\n"
-"border-radius: 11px;\n"
-"padding: 5px;\n"
-"background: qradialgradient(cx: 0.3, cy: -0.6,\n"
-"fx: 0.3, fy: -0.4,\n"
-"radius: 1.35, stop: 0 #65BAAB, stop: 1 #0E62A0);\n"
-"min-width: 80px;\n"
-"}\n"
-"QPushButton:hover {\n"
-"background: qradialgradient(cx: 0.3, cy: -0.4,\n"
-"fx: 0.3, fy: -0.4,\n"
-"radius: 1.35, stop: 0 #65BAAB, stop: 1 #0E62A0);\n"
-"}\n"
-"QPushButton:pressed {\n"
-"background: qradialgradient(cx: 0.4, cy: -0.1,\n"
-"fx: 0.4, fy: -0.1,\n"
-"radius: 1.35, stop: 0 #65BAAB, stop: 1 #ddd);\n"
-"}\n"
-"QPushButton:disabled {\n"
-"color: #888;\n"
-"background: qradialgradient(cx: 0.4, cy: -0.1,\n"
-"fx: 0.4, fy: -0.1,\n"
-"radius: 1.35, stop: 0 #65BAAB, stop: 1 #ddd);\n"
-"}*/"));
-        bRecipeMode_2->setCheckable(true);
         tabWidget->addTab(tab_Main, QString());
         bClearLogTable_2->raise();
         bLightsMain->raise();
@@ -2953,7 +2916,6 @@ public:
         mainPage->raise();
         bMainDoorInfo->raise();
         bLiquidCoolerControl->raise();
-        bRecipeMode_2->raise();
         tab_setTemp = new QWidget();
         tab_setTemp->setObjectName(QStringLiteral("tab_setTemp"));
         detailsPages = new QStackedWidget(tab_setTemp);
@@ -6969,7 +6931,7 @@ public:
         tab_Manual->setAutoFillBackground(false);
         stackedWidget = new QStackedWidget(tab_Manual);
         stackedWidget->setObjectName(QStringLiteral("stackedWidget"));
-        stackedWidget->setGeometry(QRect(10, 20, 800, 1131));
+        stackedWidget->setGeometry(QRect(10, 20, 761, 1131));
         page_3 = new QWidget();
         page_3->setObjectName(QStringLiteral("page_3"));
         page_3->setLayoutDirection(Qt::LeftToRight);
@@ -7709,76 +7671,77 @@ public:
         label_97->setStyleSheet(QStringLiteral("font: 14pt \"MS Shell Dlg 2\";"));
         label_93 = new QLabel(page_14);
         label_93->setObjectName(QStringLiteral("label_93"));
-        label_93->setGeometry(QRect(100, 180, 121, 31));
+        label_93->setGeometry(QRect(30, 180, 121, 31));
         label_93->setStyleSheet(QStringLiteral("font: 14pt \"MS Shell Dlg 2\";"));
         bSaveProfromTabl = new QPushButton(page_14);
         bSaveProfromTabl->setObjectName(QStringLiteral("bSaveProfromTabl"));
-        bSaveProfromTabl->setGeometry(QRect(480, 600, 251, 61));
+        bSaveProfromTabl->setGeometry(QRect(480, 750, 251, 61));
         bSaveProfromTabl->setMinimumSize(QSize(94, 32));
         cbChooseProfileSlot = new QComboBox(page_14);
         cbChooseProfileSlot->setObjectName(QStringLiteral("cbChooseProfileSlot"));
-        cbChooseProfileSlot->setGeometry(QRect(480, 90, 250, 40));
+        cbChooseProfileSlot->setGeometry(QRect(309, 90, 421, 40));
         cbChooseProfileSlot->setMinimumSize(QSize(250, 40));
         sbStepCount = new QSpinBox(page_14);
         sbStepCount->setObjectName(QStringLiteral("sbStepCount"));
-        sbStepCount->setGeometry(QRect(660, 470, 70, 40));
+        sbStepCount->setGeometry(QRect(660, 570, 70, 40));
         sbStepCount->setMinimumSize(QSize(70, 40));
         sbStepCount->setMaximumSize(QSize(70, 16777215));
         cbChooseTimeCoeff = new QComboBox(page_14);
         cbChooseTimeCoeff->setObjectName(QStringLiteral("cbChooseTimeCoeff"));
-        cbChooseTimeCoeff->setGeometry(QRect(480, 540, 251, 32));
+        cbChooseTimeCoeff->setGeometry(QRect(480, 670, 251, 32));
         cbChooseTimeCoeff->setMinimumSize(QSize(250, 32));
         leSaveProfileName = new QLineEdit(page_14);
         leSaveProfileName->setObjectName(QStringLiteral("leSaveProfileName"));
-        leSaveProfileName->setGeometry(QRect(480, 260, 250, 41));
+        leSaveProfileName->setGeometry(QRect(480, 360, 250, 41));
         leSaveProfileName->setMinimumSize(QSize(250, 40));
         label_96 = new QLabel(page_14);
         label_96->setObjectName(QStringLiteral("label_96"));
-        label_96->setGeometry(QRect(480, 220, 251, 31));
+        label_96->setGeometry(QRect(480, 290, 251, 31));
         label_98 = new QLabel(page_14);
         label_98->setObjectName(QStringLiteral("label_98"));
-        label_98->setGeometry(QRect(480, 470, 181, 31));
+        label_98->setGeometry(QRect(480, 570, 181, 31));
         cbChooseProfileTypeNew = new QComboBox(page_14);
         cbChooseProfileTypeNew->setObjectName(QStringLiteral("cbChooseProfileTypeNew"));
-        cbChooseProfileTypeNew->setGeometry(QRect(30, 940, 250, 40));
+        cbChooseProfileTypeNew->setGeometry(QRect(30, 1010, 250, 40));
         cbChooseProfileTypeNew->setMinimumSize(QSize(250, 40));
         cbChooseProfileTypeNew->setMaximumSize(QSize(300, 16777215));
         cbChooseProfileTypeNew->setFont(font5);
         bClearProfromTabl = new QPushButton(page_14);
         bClearProfromTabl->setObjectName(QStringLiteral("bClearProfromTabl"));
         bClearProfromTabl->setEnabled(true);
-        bClearProfromTabl->setGeometry(QRect(480, 700, 251, 61));
+        bClearProfromTabl->setGeometry(QRect(480, 850, 251, 61));
         bClearProfromTabl->setMinimumSize(QSize(94, 32));
         leTimTypeNew = new QLabel(page_14);
         leTimTypeNew->setObjectName(QStringLiteral("leTimTypeNew"));
-        leTimTypeNew->setGeometry(QRect(921, 510, 20, 31));
+        leTimTypeNew->setGeometry(QRect(800, 190, 51, 31));
+        leTimTypeNew->setFont(font4);
         leTimTypeNew->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
         bEditTablo = new QPushButton(page_14);
         bEditTablo->setObjectName(QStringLiteral("bEditTablo"));
         bEditTablo->setEnabled(true);
-        bEditTablo->setGeometry(QRect(480, 140, 251, 71));
+        bEditTablo->setGeometry(QRect(480, 170, 251, 71));
         bEditTablo->setMinimumSize(QSize(94, 50));
         leFixLiquitTempValue = new QLineEdit(page_14);
         leFixLiquitTempValue->setObjectName(QStringLiteral("leFixLiquitTempValue"));
-        leFixLiquitTempValue->setGeometry(QRect(660, 410, 70, 40));
+        leFixLiquitTempValue->setGeometry(QRect(660, 480, 70, 40));
         leFixLiquitTempValue->setMinimumSize(QSize(70, 40));
         leFixLiquitTempValue->setMaximumSize(QSize(70, 40));
         leSaveParcaAdi = new QLineEdit(page_14);
         leSaveParcaAdi->setObjectName(QStringLiteral("leSaveParcaAdi"));
-        leSaveParcaAdi->setGeometry(QRect(480, 350, 250, 41));
+        leSaveParcaAdi->setGeometry(QRect(480, 1030, 250, 41));
         leSaveParcaAdi->setMinimumSize(QSize(250, 40));
         label_123 = new QLabel(page_14);
         label_123->setObjectName(QStringLiteral("label_123"));
-        label_123->setGeometry(QRect(480, 310, 251, 31));
+        label_123->setGeometry(QRect(480, 990, 251, 31));
         label_126 = new QLabel(page_14);
         label_126->setObjectName(QStringLiteral("label_126"));
-        label_126->setGeometry(QRect(210, 90, 251, 31));
+        label_126->setGeometry(QRect(20, 90, 251, 31));
         label_129 = new QLabel(page_14);
         label_129->setObjectName(QStringLiteral("label_129"));
-        label_129->setGeometry(QRect(480, 410, 171, 31));
+        label_129->setGeometry(QRect(480, 480, 171, 31));
         layoutWidget10 = new QWidget(page_14);
         layoutWidget10->setObjectName(QStringLiteral("layoutWidget10"));
-        layoutWidget10->setGeometry(QRect(10, 220, 451, 700));
+        layoutWidget10->setGeometry(QRect(10, 220, 451, 730));
         gridLayout_7 = new QGridLayout(layoutWidget10);
         gridLayout_7->setSpacing(6);
         gridLayout_7->setContentsMargins(11, 11, 11, 11);
@@ -8297,6 +8260,10 @@ public:
 
         horizontalLayout_2->addWidget(leHumidity_0);
 
+        leChangetime = new QLabel(page_14);
+        leChangetime->setObjectName(QStringLiteral("leChangetime"));
+        leChangetime->setGeometry(QRect(150, 180, 51, 31));
+        leChangetime->setStyleSheet(QStringLiteral("font: 14pt \"MS Shell Dlg 2\";"));
         stackedWidget->addWidget(page_14);
         laTime_4 = new QLabel(tab_Manual);
         laTime_4->setObjectName(QStringLiteral("laTime_4"));
@@ -9758,7 +9725,6 @@ public:
         label_83->setText(QApplication::translate("MainWindow", "Patlatma \304\260stasyon 5 i\303\247in", Q_NULLPTR));
         bMainDoorInfo->setText(QApplication::translate("MainWindow", "Kapak Kontrol", Q_NULLPTR));
         bLiquidCoolerControl->setText(QApplication::translate("MainWindow", "S\304\261v\304\261\302\260C Kontrol", Q_NULLPTR));
-        bRecipeMode_2->setText(QApplication::translate("MainWindow", "Recete Modu", Q_NULLPTR));
         tabWidget->setTabText(tabWidget->indexOf(tab_Main), QApplication::translate("MainWindow", "Ana Sayfa", Q_NULLPTR));
         label_26->setText(QApplication::translate("MainWindow", "\304\260\305\237lenen Test Durumu", Q_NULLPTR));
         QTableWidgetItem *___qtablewidgetitem = warningTable->horizontalHeaderItem(0);
@@ -10104,6 +10070,7 @@ public:
         label_276->setText(QApplication::translate("MainWindow", "Ad\304\261m 14", Q_NULLPTR));
         label_310->setText(QApplication::translate("MainWindow", "Ad\304\261m 15", Q_NULLPTR));
         label_91->setText(QApplication::translate("MainWindow", "Ba\305\237lang\304\261\303\247 Degerleri", Q_NULLPTR));
+        leChangetime->setText(QString());
         laTime_4->setText(QApplication::translate("MainWindow", "XX:XX:XX", Q_NULLPTR));
         bMinimize_4->setText(QApplication::translate("MainWindow", "_", Q_NULLPTR));
         laDate_4->setText(QApplication::translate("MainWindow", "XX/XX/XX", Q_NULLPTR));

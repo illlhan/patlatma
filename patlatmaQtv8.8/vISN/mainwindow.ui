@@ -4407,76 +4407,6 @@ radius: 1.35, stop: 0 #65BAAB, stop: 1 #ddd);
          <bool>true</bool>
         </property>
        </widget>
-       <widget class="QPushButton" name="bRecipeMode_2">
-        <property name="geometry">
-         <rect>
-          <x>20</x>
-          <y>280</y>
-          <width>171</width>
-          <height>91</height>
-         </rect>
-        </property>
-        <property name="sizePolicy">
-         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-          <horstretch>0</horstretch>
-          <verstretch>0</verstretch>
-         </sizepolicy>
-        </property>
-        <property name="minimumSize">
-         <size>
-          <width>94</width>
-          <height>50</height>
-         </size>
-        </property>
-        <property name="maximumSize">
-         <size>
-          <width>200</width>
-          <height>100</height>
-         </size>
-        </property>
-        <property name="font">
-         <font>
-          <family>Gill Sans MT</family>
-          <pointsize>-1</pointsize>
-         </font>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">/*QPushButton {
-color: #fff;
-font-family: &quot;Gill Sans MT&quot;;
-font-size: 21px;
-border: 2px solid #c3fcf1;
-border-radius: 11px;
-padding: 5px;
-background: qradialgradient(cx: 0.3, cy: -0.6,
-fx: 0.3, fy: -0.4,
-radius: 1.35, stop: 0 #65BAAB, stop: 1 #0E62A0);
-min-width: 80px;
-}
-QPushButton:hover {
-background: qradialgradient(cx: 0.3, cy: -0.4,
-fx: 0.3, fy: -0.4,
-radius: 1.35, stop: 0 #65BAAB, stop: 1 #0E62A0);
-}
-QPushButton:pressed {
-background: qradialgradient(cx: 0.4, cy: -0.1,
-fx: 0.4, fy: -0.1,
-radius: 1.35, stop: 0 #65BAAB, stop: 1 #ddd);
-}
-QPushButton:disabled {
-color: #888;
-background: qradialgradient(cx: 0.4, cy: -0.1,
-fx: 0.4, fy: -0.1,
-radius: 1.35, stop: 0 #65BAAB, stop: 1 #ddd);
-}*/</string>
-        </property>
-        <property name="text">
-         <string>Recete Modu</string>
-        </property>
-        <property name="checkable">
-         <bool>true</bool>
-        </property>
-       </widget>
        <zorder>bClearLogTable_2</zorder>
        <zorder>bLightsMain</zorder>
        <zorder>laDate</zorder>
@@ -4490,7 +4420,6 @@ radius: 1.35, stop: 0 #65BAAB, stop: 1 #ddd);
        <zorder>mainPage</zorder>
        <zorder>bMainDoorInfo</zorder>
        <zorder>bLiquidCoolerControl</zorder>
-       <zorder>bRecipeMode_2</zorder>
       </widget>
       <widget class="QWidget" name="tab_setTemp">
        <attribute name="title">
@@ -4619,16 +4548,16 @@ border-radius : 8px;
               <pointsize>14</pointsize>
              </font>
             </property>
-            <attribute name="horizontalHeaderDefaultSectionSize">
-             <number>250</number>
-            </attribute>
             <attribute name="horizontalHeaderMinimumSectionSize">
              <number>100</number>
             </attribute>
-            <attribute name="verticalHeaderDefaultSectionSize">
-             <number>30</number>
+            <attribute name="horizontalHeaderDefaultSectionSize">
+             <number>250</number>
             </attribute>
             <attribute name="verticalHeaderMinimumSectionSize">
+             <number>30</number>
+            </attribute>
+            <attribute name="verticalHeaderDefaultSectionSize">
              <number>30</number>
             </attribute>
             <attribute name="verticalHeaderStretchLastSection">
@@ -13659,7 +13588,7 @@ font: 75 45pt &quot;Gill Sans MT&quot;;
          <rect>
           <x>10</x>
           <y>20</y>
-          <width>800</width>
+          <width>761</width>
           <height>1131</height>
          </rect>
         </property>
@@ -15212,7 +15141,7 @@ image: url(:/images/img/chechbox_Pipe_unchecked.png);
          <widget class="QLabel" name="label_93">
           <property name="geometry">
            <rect>
-            <x>100</x>
+            <x>30</x>
             <y>180</y>
             <width>121</width>
             <height>31</height>
@@ -15229,7 +15158,7 @@ image: url(:/images/img/chechbox_Pipe_unchecked.png);
           <property name="geometry">
            <rect>
             <x>480</x>
-            <y>600</y>
+            <y>750</y>
             <width>251</width>
             <height>61</height>
            </rect>
@@ -15247,9 +15176,9 @@ image: url(:/images/img/chechbox_Pipe_unchecked.png);
          <widget class="QComboBox" name="cbChooseProfileSlot">
           <property name="geometry">
            <rect>
-            <x>480</x>
+            <x>309</x>
             <y>90</y>
-            <width>250</width>
+            <width>421</width>
             <height>40</height>
            </rect>
           </property>
@@ -15269,7 +15198,7 @@ image: url(:/images/img/chechbox_Pipe_unchecked.png);
           <property name="geometry">
            <rect>
             <x>660</x>
-            <y>470</y>
+            <y>570</y>
             <width>70</width>
             <height>40</height>
            </rect>
@@ -15291,7 +15220,7 @@ image: url(:/images/img/chechbox_Pipe_unchecked.png);
           <property name="geometry">
            <rect>
             <x>480</x>
-            <y>540</y>
+            <y>670</y>
             <width>251</width>
             <height>32</height>
            </rect>
@@ -15330,7 +15259,7 @@ image: url(:/images/img/chechbox_Pipe_unchecked.png);
           <property name="geometry">
            <rect>
             <x>480</x>
-            <y>260</y>
+            <y>360</y>
             <width>250</width>
             <height>41</height>
            </rect>
@@ -15346,7 +15275,7 @@ image: url(:/images/img/chechbox_Pipe_unchecked.png);
           <property name="geometry">
            <rect>
             <x>480</x>
-            <y>220</y>
+            <y>290</y>
             <width>251</width>
             <height>31</height>
            </rect>
@@ -15359,7 +15288,7 @@ image: url(:/images/img/chechbox_Pipe_unchecked.png);
           <property name="geometry">
            <rect>
             <x>480</x>
-            <y>470</y>
+            <y>570</y>
             <width>181</width>
             <height>31</height>
            </rect>
@@ -15372,7 +15301,7 @@ image: url(:/images/img/chechbox_Pipe_unchecked.png);
           <property name="geometry">
            <rect>
             <x>30</x>
-            <y>940</y>
+            <y>1010</y>
             <width>250</width>
             <height>40</height>
            </rect>
@@ -15419,7 +15348,7 @@ image: url(:/images/img/chechbox_Pipe_unchecked.png);
           <property name="geometry">
            <rect>
             <x>480</x>
-            <y>700</y>
+            <y>850</y>
             <width>251</width>
             <height>61</height>
            </rect>
@@ -15437,11 +15366,20 @@ image: url(:/images/img/chechbox_Pipe_unchecked.png);
          <widget class="QLabel" name="leTimTypeNew">
           <property name="geometry">
            <rect>
-            <x>921</x>
-            <y>510</y>
-            <width>20</width>
+            <x>800</x>
+            <y>190</y>
+            <width>51</width>
             <height>31</height>
            </rect>
+          </property>
+          <property name="font">
+           <font>
+            <family>Gill Sans MT</family>
+            <pointsize>18</pointsize>
+            <weight>5</weight>
+            <italic>false</italic>
+            <bold>false</bold>
+           </font>
           </property>
           <property name="text">
            <string/>
@@ -15457,7 +15395,7 @@ image: url(:/images/img/chechbox_Pipe_unchecked.png);
           <property name="geometry">
            <rect>
             <x>480</x>
-            <y>140</y>
+            <y>170</y>
             <width>251</width>
             <height>71</height>
            </rect>
@@ -15476,7 +15414,7 @@ image: url(:/images/img/chechbox_Pipe_unchecked.png);
           <property name="geometry">
            <rect>
             <x>660</x>
-            <y>410</y>
+            <y>480</y>
             <width>70</width>
             <height>40</height>
            </rect>
@@ -15501,7 +15439,7 @@ image: url(:/images/img/chechbox_Pipe_unchecked.png);
           <property name="geometry">
            <rect>
             <x>480</x>
-            <y>350</y>
+            <y>1030</y>
             <width>250</width>
             <height>41</height>
            </rect>
@@ -15517,7 +15455,7 @@ image: url(:/images/img/chechbox_Pipe_unchecked.png);
           <property name="geometry">
            <rect>
             <x>480</x>
-            <y>310</y>
+            <y>990</y>
             <width>251</width>
             <height>31</height>
            </rect>
@@ -15529,7 +15467,7 @@ image: url(:/images/img/chechbox_Pipe_unchecked.png);
          <widget class="QLabel" name="label_126">
           <property name="geometry">
            <rect>
-            <x>210</x>
+            <x>20</x>
             <y>90</y>
             <width>251</width>
             <height>31</height>
@@ -15543,7 +15481,7 @@ image: url(:/images/img/chechbox_Pipe_unchecked.png);
           <property name="geometry">
            <rect>
             <x>480</x>
-            <y>410</y>
+            <y>480</y>
             <width>171</width>
             <height>31</height>
            </rect>
@@ -15558,7 +15496,7 @@ image: url(:/images/img/chechbox_Pipe_unchecked.png);
             <x>10</x>
             <y>220</y>
             <width>451</width>
-            <height>700</height>
+            <height>730</height>
            </rect>
           </property>
           <layout class="QGridLayout" name="gridLayout_7">
@@ -16733,6 +16671,22 @@ image: url(:/images/img/chechbox_Pipe_unchecked.png);
             </widget>
            </item>
           </layout>
+         </widget>
+         <widget class="QLabel" name="leChangetime">
+          <property name="geometry">
+           <rect>
+            <x>150</x>
+            <y>180</y>
+            <width>51</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: 14pt &quot;MS Shell Dlg 2&quot;;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
          </widget>
         </widget>
        </widget>

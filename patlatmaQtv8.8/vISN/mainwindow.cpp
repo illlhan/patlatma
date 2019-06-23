@@ -700,6 +700,18 @@ void MainWindow::setupVisuals()
     connect(ui->leCalLiquidTankLevelErr,SIGNAL(selectionChanged()),this,SLOT(run_keyboard_lineEdit()));
     connect(ui->leCalLiquidTankLevelCoeff,SIGNAL(selectionChanged()),this,SLOT(run_keyboard_lineEdit()));
 
+    connect(ui->lePartName2_1,SIGNAL(selectionChanged()),this,SLOT(run_keyboard_lineEdit()));
+    connect(ui->lePartName2_2,SIGNAL(selectionChanged()),this,SLOT(run_keyboard_lineEdit()));
+    connect(ui->lePartName2_3,SIGNAL(selectionChanged()),this,SLOT(run_keyboard_lineEdit()));
+    connect(ui->lePartName2_4,SIGNAL(selectionChanged()),this,SLOT(run_keyboard_lineEdit()));
+    connect(ui->lePartName2_5,SIGNAL(selectionChanged()),this,SLOT(run_keyboard_lineEdit()));
+
+    connect(ui->lePartName1_1,SIGNAL(selectionChanged()),this,SLOT(run_keyboard_lineEdit()));
+    connect(ui->lePartName1_2,SIGNAL(selectionChanged()),this,SLOT(run_keyboard_lineEdit()));
+    connect(ui->lePartName1_3,SIGNAL(selectionChanged()),this,SLOT(run_keyboard_lineEdit()));
+    connect(ui->lePartName1_4,SIGNAL(selectionChanged()),this,SLOT(run_keyboard_lineEdit()));
+    connect(ui->lePartName1_5,SIGNAL(selectionChanged()),this,SLOT(run_keyboard_lineEdit()));
+
    //  connect(ui->leCalLiquidTankLevelCoeff,SIGNAL(selectionChanged()),this,SLOT(run_keyboard_lineEdit()));
 
 
@@ -835,6 +847,11 @@ void MainWindow::setupVisuals()
     loadValueDirtyTankLevelCalibration();
     loadValueExpansionTankLevelCalibration();
 
+    loadValueLiquidTankLevelCalibration();
+
+    loadValueLiquidTempCalibration();
+
+
    resetFaultVisuals();
 
 
@@ -902,6 +919,8 @@ void MainWindow::serialMessage(uint command, QByteArray data)
         float vLiquidTankLevel;        
         float inpLiquidTemp;
         float dsbCalLiquidTempOut;
+        float CalLiquidTempCoeff;
+        float CalLiquidTempErr;
 
         float liquid_level;
 
@@ -949,10 +968,10 @@ void MainWindow::serialMessage(uint command, QByteArray data)
         CalLiquidTankLevelCoeff = ui->leCalLiquidTankLevelCoeff->text().toDouble();
         CalLiquidTankLevelErr = ui->leCalLiquidTankLevelErr->text().toDouble();
         //vLiquidTankLevel = ((CalLiquidTankLevelCoeff * inpLiquidTankLevel) + CalLiquidTankLevelErr );
-        ui->pbLiquidTankLevel->setMaximum(15000);
+        ui->pbLiquidTankLevel->setMaximum(32000);
         ui->pbLiquidTankLevel->setMinimum(0);
         ui->pbLiquidTankLevel->setValue(liquid_level);
-        ui->pbLiquidTankLevel1->setMaximum(15000);
+        ui->pbLiquidTankLevel1->setMaximum(32000);
         ui->pbLiquidTankLevel1->setMinimum(0);
         ui->pbLiquidTankLevel1->setValue(liquid_level);
 
@@ -983,10 +1002,11 @@ void MainWindow::serialMessage(uint command, QByteArray data)
         ui->dsbCalPipePressure1Out->setValue(pipe1Pressure);
 
         //ui->dsbCalLiquidTankLevelOut->setValue(vDirtyTankLevel);
-
+        CalLiquidTempCoeff = ui->leCalLiquidTempCoeff->text().toDouble();
+        CalLiquidTempErr = ui->leCalLiquidTempErr->text().toDouble();
 
         ui->dsbCalLiquidTempInput->setValue(inpLiquidTemp); // sıvı sıcaklıgı veri ataması
-        liquid_temp = ((ui->leCalLiquidTempCoeff->text().toDouble() * inpLiquidTemp) + ui->leCalLiquidTempErr->text().toDouble() );  //sıvı sıcaklıgı kalibre
+        liquid_temp = (( CalLiquidTempCoeff * inpLiquidTemp) + CalLiquidTempErr );  //sıvı sıcaklıgı kalibre
         ui->dsbLiquidTemp_2->setValue(liquid_temp); //sıvı sıcaklıgı test takip sayfası
         ui->dsbFixLiquidTempValue->setValue(liquid_temp);
         ui->dsbCalLiquidTempOut->setValue(liquid_temp);
@@ -6622,7 +6642,7 @@ void MainWindow::loadValueLiquidTempCalibration()
 
     #ifdef Q_OS_WIN
     // windows code goes here
-        QString filePath = "settings\\calLiquidTankLevel.txt";
+        QString filePath = "settings\\calLiquidTemp.txt";
     #endif
 
     QStringList wordList;
@@ -7872,7 +7892,7 @@ void MainWindow::saveProfileInfoToStruct(quint8 currentProfile){
         {
         //nothing selected for neither step type nor step time unit. Going forward should be banned.
 
-        ui->leTimTypeNew->setText("Seciniz");
+        ui->leChangetime->setText("");
         }
         else if ( ui->cbChooseTimeCoeff->currentIndex() == 1 )
         {
@@ -7883,7 +7903,7 @@ void MainWindow::saveProfileInfoToStruct(quint8 currentProfile){
         //   nProfileSave[currentProfile].step[currentNStep].stepUnit = 2;
         //     tProfileSave[currentProfile].startValue = ui->dsbTStartValue->value();
 
-        ui->leTimTypeNew->setText("");
+        ui->leChangetime->setText("(sa.)");
         }
         else if ( ui->cbChooseTimeCoeff->currentIndex() == 2 )
         {
@@ -7897,8 +7917,22 @@ void MainWindow::saveProfileInfoToStruct(quint8 currentProfile){
         //   nProfileSave[currentProfile].step[currentNStep].stepUnit = 3;
         //     tProfileSave[currentProfile].startValue = ui->dsbTStartValue->value();
 
-        ui->leTimTypeNew->setText("");
+        ui->leChangetime->setText("(dk.)");
         }
+    else if ( ui->cbChooseTimeCoeff->currentIndex() == 3 )
+    {
+
+    tProfileSave[currentProfile].step[0].stepUnit  =3;
+
+
+    //hour selected for step time unit, do what you gotta do.
+
+    //   nProfileSave[currentProfile].active = 1;
+    //   nProfileSave[currentProfile].step[currentNStep].stepUnit = 3;
+    //     tProfileSave[currentProfile].startValue = ui->dsbTStartValue->value();
+
+    ui->leChangetime->setText("(sn.)");
+    }
     tProfileSave[currentProfile].step[0].lDuration = ui->leTime_1->text().toDouble();
 
     tProfileSave[currentProfile].step[0].lTarget   = ui->leTempInput_1->text().toDouble();
@@ -9361,4 +9395,23 @@ void MainWindow::on_leFixPressureVelocity_2_textChanged(const QString &arg1)
 
 }else {
  ui->bSendProfileMain->setEnabled(true);}
+}
+
+void MainWindow::on_cbChooseTimeCoeff_currentIndexChanged(int index)
+{
+    if(index==0){
+        ui->leChangetime->setText("");
+    }
+    else if (index==1) {
+        ui->leChangetime->setText("(sa.)");
+
+    }
+    else if (index==2) {
+        ui->leChangetime->setText("(dk.)");
+
+    }
+    else if (index==3) {
+        ui->leChangetime->setText("(sn.)");
+
+    }
 }

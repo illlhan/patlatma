@@ -401,6 +401,8 @@ private slots:
 
    void on_leFixPressureVelocity_2_textChanged(const QString &arg1);
 
+   void on_cbChooseTimeCoeff_currentIndexChanged(int index);
+
 private:
     Ui::MainWindow *ui;
 

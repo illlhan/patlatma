@@ -133,7 +133,7 @@ public:
         Button0->setObjectName(QString::fromUtf8("Button0"));
         sizePolicy1.setHeightForWidth(Button0->sizePolicy().hasHeightForWidth());
         Button0->setSizePolicy(sizePolicy1);
-        Button0->setMinimumSize(QSize(20, 0));
+        Button0->setMinimumSize(QSize(40, 0));
 
         gridLayout->addWidget(Button0, 3, 1, 1, 1);
 
@@ -141,7 +141,7 @@ public:
         Button1->setObjectName(QString::fromUtf8("Button1"));
         sizePolicy1.setHeightForWidth(Button1->sizePolicy().hasHeightForWidth());
         Button1->setSizePolicy(sizePolicy1);
-        Button1->setMinimumSize(QSize(20, 0));
+        Button1->setMinimumSize(QSize(40, 0));
 
         gridLayout->addWidget(Button1, 2, 0, 1, 1);
 
@@ -149,7 +149,7 @@ public:
         Button2->setObjectName(QString::fromUtf8("Button2"));
         sizePolicy1.setHeightForWidth(Button2->sizePolicy().hasHeightForWidth());
         Button2->setSizePolicy(sizePolicy1);
-        Button2->setMinimumSize(QSize(20, 0));
+        Button2->setMinimumSize(QSize(40, 0));
 
         gridLayout->addWidget(Button2, 2, 1, 1, 1);
 
@@ -157,7 +157,7 @@ public:
         Button3->setObjectName(QString::fromUtf8("Button3"));
         sizePolicy1.setHeightForWidth(Button3->sizePolicy().hasHeightForWidth());
         Button3->setSizePolicy(sizePolicy1);
-        Button3->setMinimumSize(QSize(20, 0));
+        Button3->setMinimumSize(QSize(40, 0));
 
         gridLayout->addWidget(Button3, 2, 2, 1, 1);
 
@@ -165,7 +165,7 @@ public:
         Button4->setObjectName(QString::fromUtf8("Button4"));
         sizePolicy1.setHeightForWidth(Button4->sizePolicy().hasHeightForWidth());
         Button4->setSizePolicy(sizePolicy1);
-        Button4->setMinimumSize(QSize(20, 0));
+        Button4->setMinimumSize(QSize(40, 0));
 
         gridLayout->addWidget(Button4, 1, 0, 1, 1);
 
@@ -173,7 +173,7 @@ public:
         Button5->setObjectName(QString::fromUtf8("Button5"));
         sizePolicy1.setHeightForWidth(Button5->sizePolicy().hasHeightForWidth());
         Button5->setSizePolicy(sizePolicy1);
-        Button5->setMinimumSize(QSize(20, 0));
+        Button5->setMinimumSize(QSize(40, 0));
 
         gridLayout->addWidget(Button5, 1, 1, 1, 1);
 
@@ -181,7 +181,7 @@ public:
         Button6->setObjectName(QString::fromUtf8("Button6"));
         sizePolicy1.setHeightForWidth(Button6->sizePolicy().hasHeightForWidth());
         Button6->setSizePolicy(sizePolicy1);
-        Button6->setMinimumSize(QSize(20, 0));
+        Button6->setMinimumSize(QSize(40, 0));
 
         gridLayout->addWidget(Button6, 1, 2, 1, 1);
 
@@ -189,7 +189,7 @@ public:
         Button7->setObjectName(QString::fromUtf8("Button7"));
         sizePolicy1.setHeightForWidth(Button7->sizePolicy().hasHeightForWidth());
         Button7->setSizePolicy(sizePolicy1);
-        Button7->setMinimumSize(QSize(20, 0));
+        Button7->setMinimumSize(QSize(40, 0));
 
         gridLayout->addWidget(Button7, 0, 0, 1, 1);
 
@@ -197,7 +197,7 @@ public:
         Button8->setObjectName(QString::fromUtf8("Button8"));
         sizePolicy1.setHeightForWidth(Button8->sizePolicy().hasHeightForWidth());
         Button8->setSizePolicy(sizePolicy1);
-        Button8->setMinimumSize(QSize(20, 0));
+        Button8->setMinimumSize(QSize(40, 0));
 
         gridLayout->addWidget(Button8, 0, 1, 1, 1);
 
@@ -205,7 +205,7 @@ public:
         Button9->setObjectName(QString::fromUtf8("Button9"));
         sizePolicy1.setHeightForWidth(Button9->sizePolicy().hasHeightForWidth());
         Button9->setSizePolicy(sizePolicy1);
-        Button9->setMinimumSize(QSize(20, 0));
+        Button9->setMinimumSize(QSize(40, 0));
 
         gridLayout->addWidget(Button9, 0, 2, 1, 1);
 
@@ -213,7 +213,7 @@ public:
         enterButton->setObjectName(QString::fromUtf8("enterButton"));
         sizePolicy1.setHeightForWidth(enterButton->sizePolicy().hasHeightForWidth());
         enterButton->setSizePolicy(sizePolicy1);
-        enterButton->setMinimumSize(QSize(20, 0));
+        enterButton->setMinimumSize(QSize(40, 0));
 
         gridLayout->addWidget(enterButton, 3, 2, 1, 1);
 
@@ -221,7 +221,7 @@ public:
         commaButton->setObjectName(QString::fromUtf8("commaButton"));
         sizePolicy1.setHeightForWidth(commaButton->sizePolicy().hasHeightForWidth());
         commaButton->setSizePolicy(sizePolicy1);
-        commaButton->setMinimumSize(QSize(20, 0));
+        commaButton->setMinimumSize(QSize(40, 0));
 
         gridLayout->addWidget(commaButton, 3, 0, 1, 1);
 
